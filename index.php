@@ -1,6 +1,6 @@
 <?php
 
-class CucuBau {
+class CucuBaululu {
 
 	$var= 'In physics, energy is a property of objects, transferable among them via fundamental interactions, which can be converted in form but not created or destroyed.';
 
