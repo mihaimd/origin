@@ -1,0 +1,7 @@
+{
+  "name": "triviatwist",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
