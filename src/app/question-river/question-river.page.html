@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Inbox cucu
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fixed-bg">
+  
+    <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <div class="river-wrapper">
+      <!-- <ion-card *ngFor="let question of getQuestions()">
+        <ion-card-header>
+          <ion-card-subtitle>2015-01-02 | geography</ion-card-subtitle>
+        </ion-card-header>
+    
+        <ion-card-content>
+          <ion-button expand="block" size="large" (click)="questionDetail('21')">Answer</ion-button>
+          <button class="green normal" type="button">
+            <div class="button-text">fsdfdsfds</div>
+          </button>
+        </ion-card-content>
+      </ion-card> -->
+      <div class="sidebarBox" *ngFor="let question of getQuestions()">
+        <div class="content">
+          <div>2015-01-02 | geography</div>
+          <button class="green normal" type="button" (click)="questionDetail('21')">
+            <div class="button-text">fsdfdsfds</div>
+          </button>
+          <button class="gold" type="button" (click)="questionDetail('21')">
+            <div class="button-text">fsdfdsfds</div>
+          </button>
+        </div>
+        <div class="toggle"></div>
+      </div>
+      <!-- <div class="dialogContents" *ngFor="let question of getQuestions()"></div> -->
+    </div>
+    <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+    <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+      <ion-fab-button (click)="goHome()">
+        <ion-icon name="home">ff</ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+</ion-content>
+<ion-footer>
+  Footer
+</ion-footer>

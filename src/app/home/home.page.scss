@@ -1,0 +1,46 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .avatar-border {
+        border-radius: 50%;
+        border: 1px solid #000;
+        width: 100px;
+        height: 100px;
+        margin-top: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ion-icon[name="person-circle-outline"] {
+            font-size: 6rem;
+        }
+        ion-icon[name="camera-outline"] {
+            font-size: 1rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        background-color: #fff;
+        position: relative;
+    }
+    .player-name {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .player-level {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+    .flag {
+        position: absolute;
+        top: 72px;
+        right: -2px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        &.romania {
+            background: url('/assets/flags/romania.webp') no-repeat center center/cover;
+        }
+    }
+}

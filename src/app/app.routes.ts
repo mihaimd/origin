@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
   },
   {
@@ -11,9 +11,16 @@ export const routes: Routes = [
       import('./view-message/view-message.page').then((m) => m.ViewMessagePage),
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
+    path: 'question-river',
+    loadComponent: () => import('./question-river/question-river.page').then( m => m.QuestionRiverPage)
   },
+  {
+    path: 'how-to',
+    loadComponent: () => import('./how-to/how-to.page').then( m => m.HowToPage)
+  },
+  {
+    path: 'q-detail/:id',
+    loadComponent: () => import('./q-detail/q-detail.page').then( m => m.QDetailPage)
+  }
 ];
 

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 export interface Message {
   fromName: string;
@@ -6,6 +7,12 @@ export interface Message {
   date: string;
   id: number;
   read: boolean;
+}
+
+export interface Answer {
+  type: string;
+  options: string[];
+  id: number
 }
 
 @Injectable({
@@ -71,6 +78,19 @@ export class DataService {
     }
   ];
 
+  public answers: Answer[] = [
+    {
+      type: 'multiple',
+      options: ['New event: Trip to Vegas', 'fsdfds', 'fgdsygfyds gyds gfysdg', 'fsdfhuds hfh dagygdysag d gsa gy g'],
+      id: 1
+    },
+    {
+      type: 'single',
+      options: ['New event: Trip to Vegas', 'fsdfds', 'fgdsygfyds gyds gfysdg', 'fsdfhuds hfh dagygdysag d gsa gy g'],
+      id: 2
+    }
+  ];
+
   constructor() { }
 
   public getMessages(): Message[] {
@@ -79,5 +99,9 @@ export class DataService {
 
   public getMessageById(id: number): Message {
     return this.messages[id];
+  }
+
+  public getAnswerById(id: number): Observable<Answer> {
+    return of(this.answers[id]);
   }
 }
