@@ -1,18 +1,54 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>q-detail</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
   <div class="sidebarBox">
-    <div class="content">
-Cucucbau
-<button class="arrow-right"></button>
-<button class="arrow-left"></button>
-<div class="divider"></div>
+    <div class="content" *ngIf="answer$ | async as data">
+      <div class="question">{{data.question}}</div>
+      <div class="divider"></div>
+      <button *ngFor="let option of data.answers.options" class="blue" type="button" (click)="onAnswerChosen($event, option.correct)">
+        <div class="button-text" style="font-size: 21px;">{{option.label}}</div>
+      </button>
+      <div class="divider"></div>
+      <!-- <button class="arrow-right"></button>
+      <button class="arrow-left"></button>
+      <div class="divider"></div> -->
+      <app-timer (timeUp)="timeUp($event)"></app-timer>
     </div>
-    <div class="toggle"></div>
+    <!-- <div class="toggle"></div> -->
   </div>
-
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

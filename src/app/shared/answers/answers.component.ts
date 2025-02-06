@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   imports: [IonRadio, IonCheckbox, CommonModule, IonRadioGroup]
 })
 export class AnswersComponent  implements OnInit {
-  @Input() public answer: Answer = {type: 'single', options: [''], id: 0};
+  // @Input() public answer: Answer = {type: 'single', options: [''], id: 0};
 
   constructor() { }
 

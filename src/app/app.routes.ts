@@ -6,11 +6,6 @@ export const routes: Routes = [
     loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
   },
   {
-    path: 'message/:id',
-    loadComponent: () =>
-      import('./view-message/view-message.page').then((m) => m.ViewMessagePage),
-  },
-  {
     path: 'question-river',
     loadComponent: () => import('./question-river/question-river.page').then( m => m.QuestionRiverPage)
   },
@@ -21,6 +16,10 @@ export const routes: Routes = [
   {
     path: 'q-detail/:id',
     loadComponent: () => import('./q-detail/q-detail.page').then( m => m.QDetailPage)
+  },
+  {
+    path: 'profile',
+    loadComponent: () => import('./profile/profile.page').then( m => m.ProfilePage)
   }
 ];
 

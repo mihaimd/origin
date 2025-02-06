@@ -2,17 +2,21 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
 export interface Message {
-  fromName: string;
-  subject: string;
+  question: string;
+  answers: Answer;
   date: string;
   id: number;
-  read: boolean;
+  category: string
 }
 
 export interface Answer {
   type: string;
-  options: string[];
-  id: number
+  options: Option[];
+}
+
+export interface Option {
+  label: string,
+  correct: boolean
 }
 
 @Injectable({
@@ -21,73 +25,60 @@ export interface Answer {
 export class DataService {
   public messages: Message[] = [
     {
-      fromName: 'Matt Chorsey',
-      subject: 'New event: Trip to Vegas',
-      date: '9:32 AM',
+      question: 'What is the capital of Romania?',
+      answers: {options: [{label: 'Bucharest', correct: true}, {label: 'Budapest', correct: false}, {label: 'Prague', correct: false}, {label: 'Warsaw', correct: false}], type: 'single'},
+      date: '2025-02-03',
       id: 0,
-      read: false
+      category: "geography"
     },
     {
-      fromName: 'Lauren Ruthford',
-      subject: 'Long time no chat',
-      date: '6:12 AM',
+      question: 'What is the capital of Romania?',
+      answers: {options: [{label: 'Bucharest', correct: false}, {label: 'Budapest', correct: false}, {label: 'Prague', correct: false}, {label: 'Warsaw', correct: false}], type: 'single'},
+      date: '2015-02-03',
       id: 1,
-      read: false
+      category: "geography"
     },
     {
-      fromName: 'Jordan Firth',
-      subject: 'Report Results',
-      date: '4:55 AM',
+      question: 'What is the capital of Romania?',
+      answers: {options: [{label: 'Bucharest', correct: false}, {label: 'Budapest', correct: false}, {label: 'Prague', correct: false}, {label: 'Warsaw', correct: false}], type: 'single'},
+      date: '2015-02-03',
       id: 2,
-      read: false
+      category: "geography"
     },
     {
-      fromName: 'Bill Thomas',
-      subject: 'The situation',
-      date: 'Yesterday',
+      question: 'What is the capital of Romania?',
+      answers: {options: [{label: 'Bucharest', correct: false}, {label: 'Budapest', correct: false}, {label: 'Prague', correct: false}, {label: 'Warsaw', correct: false}], type: 'single'},
+      date: '2015-02-03',
       id: 3,
-      read: false
+      category: "geography"
     },
     {
-      fromName: 'Joanne Pollan',
-      subject: 'Updated invitation: Swim lessons',
-      date: 'Yesterday',
+      question: 'What is the capital of Romania?',
+      answers: {options: [{label: 'Bucharest', correct: false}, {label: 'Budapest', correct: false}, {label: 'Prague', correct: false}, {label: 'Warsaw', correct: false}], type: 'single'},
+      date: '2015-02-03',
       id: 4,
-      read: false
+      category: "geography"
     },
     {
-      fromName: 'Andrea Cornerston',
-      subject: 'Last minute ask',
-      date: 'Yesterday',
+      question: 'What is the capital of Romania?',
+      answers: {options: [{label: 'Bucharest', correct: false}, {label: 'Budapest', correct: false}, {label: 'Prague', correct: false}, {label: 'Warsaw', correct: false}], type: 'single'},
+      date: '2015-02-03',
       id: 5,
-      read: false
+      category: "geography"
     },
     {
-      fromName: 'Moe Chamont',
-      subject: 'Family Calendar - Version 1',
-      date: 'Last Week',
+      question: 'What is the capital of Romania?',
+      answers: {options: [{label: 'Bucharest', correct: false}, {label: 'Budapest', correct: false}, {label: 'Prague', correct: false}, {label: 'Warsaw', correct: false}], type: 'single'},
+      date: '2015-02-03',
       id: 6,
-      read: false
+      category: "geography"
     },
     {
-      fromName: 'Kelly Richardson',
-      subject: 'Placeholder Headhots',
-      date: 'Last Week',
+      question: 'What is the capital of Romania?',
+      answers: {options: [{label: 'Bucharest', correct: false}, {label: 'Budapest', correct: false}, {label: 'Prague', correct: false}, {label: 'Warsaw', correct: false}], type: 'single'},
+      date: '2015-02-03',
       id: 7,
-      read: false
-    }
-  ];
-
-  public answers: Answer[] = [
-    {
-      type: 'multiple',
-      options: ['New event: Trip to Vegas', 'fsdfds', 'fgdsygfyds gyds gfysdg', 'fsdfhuds hfh dagygdysag d gsa gy g'],
-      id: 1
-    },
-    {
-      type: 'single',
-      options: ['New event: Trip to Vegas', 'fsdfds', 'fgdsygfyds gyds gfysdg', 'fsdfhuds hfh dagygdysag d gsa gy g'],
-      id: 2
+      category: "geography"
     }
   ];
 
@@ -97,11 +88,7 @@ export class DataService {
     return this.messages;
   }
 
-  public getMessageById(id: number): Message {
-    return this.messages[id];
-  }
-
-  public getAnswerById(id: number): Observable<Answer> {
-    return of(this.answers[id]);
+  public getMessageById(id: number): Observable<Message> {
+    return of(this.messages[id]);
   }
 }
