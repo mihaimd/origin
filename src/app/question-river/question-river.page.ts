@@ -52,5 +52,7 @@ export class QuestionRiverPage implements OnInit {
     this.router.navigate(['q-detail', id]);
   }
 
-
+  goToProfile() {
+    this.router.navigate(['profile']);
+  }
 }

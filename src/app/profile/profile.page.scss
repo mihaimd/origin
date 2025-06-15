@@ -7,3 +7,17 @@ ion-avatar {
 .profile-name {
     font-size: 1.5rem;
 }
+
+.avatars-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-height: 350px;
+    overflow: scroll;
+}
+
+.avatar-image {
+    width: 100px;
+    height: 100px;
+}

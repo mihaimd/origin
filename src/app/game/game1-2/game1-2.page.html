@@ -1,0 +1,97 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                <h1 class="ion-text-center">Chatpter 1</h1>
+                <h2 class="ion-text-center">~ The Shattererd Veil ~</h2>
+                <p>Anger and confusion swirl within you. You leave the village square before the celebration can begin,
+                   your feet carrying you home before your thoughts can catch up.</p><p>The sky burns gold behind the hills,
+                    but the warmth of the evening feels distant.You burst into the cottage, your voice sharper than you intended.</p>
+            <i>“Why didn’t you tell me? Who am I?!”</i>
+
+<p>Your parents flinch—not from fear, but from pain. They’ve carried this burden for eighteen years.</p>
+
+<i>“We told you the truth we knew,” your mother says softly. “We don’t know where you came from. But... there was something else. Something we never understood. We’ve kept it hidden—until now.”</i>
+
+<p>Your father disappears into the attic. When he returns, he carries a bundle wrapped in silk the color of midnight. Reverently, he unfolds it to reveal a strange object:
+A pendant, shaped like an eye with no pupil, etched with symbols that shimmer faintly in the firelight. It pulses once, as if recognizing you.</p>
+
+<i>“We found this beside you in the basket. We didn’t know what it meant. But we always knew, one day, you’d need it.”</i>
+
+<p>As you take the pendant, the world seems to pause. A wave of forgotten voices floods your mind—ancient, distant, whispering your name.
+
+The pendant is warm. It feels like... home.</p>
+                <div class="content-choice">
+                  <div class="choice" id="1" (click)="selectOption(1)">
+                    <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
+                    <span class="bullet-text">You put the pendant around your neck</span>
+                  </div>
+                  <div class="choice" id="2" (click)="selectOption(2)">
+                    <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
+                    <span class="bullet-text">You decide to see <strong>Eldrin</strong> the old wizzard which protects your village</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">You go to the village center square to visit the "Wisdon Stone".</span>
+                  </div>
+                </div>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

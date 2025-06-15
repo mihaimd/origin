@@ -37,4 +37,8 @@ export class HomePage {
   goToProfile() {
     this.router.navigate(['profile']);
   }
+
+  goToGame() {
+    this.router.navigate(['game']);
+  }
 }
