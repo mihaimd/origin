@@ -1,0 +1,105 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                <h2 class="ion-text-center">~ 🧜‍♀️ The Song of the Deep ~</h2>
+                <p>You reach out toward one of the shimmering bubbles, feeling the water hum around your fingertips. As
+                  your hand passes through its glowing surface, a question forms—not in words, but as a memory surfacing
+                  from beneath the waves.</p>
+                <p>You close your eyes and speak your answer aloud, steady and sure, though you don’t know how you know
+                  it.</p>
+                <p>For a moment, silence falls across the lake. The mists pause. The air grows heavy.</p>
+                <p>Then the bubble bursts into radiant light, and the water begins to shimmer around you like a curtain
+                  parting.</p>
+                <p>The mermaid rises from the lake again, her eyes wide with something between curiosity and
+                  recognition.</p>
+                <p><i>“Few among your kind remember such things,”</i> she says softly. <i>“Yet the knowledge sleeps
+                    within you. That is no accident.”</i></p>
+                <p>She lifts her hands, and the <strong>skyroot fronds</strong> drift toward you, glowing faintly with
+                  silver light. You gather them carefully, their scent sharp and sweet like crushed mint and riverstone.
+                </p>
+                <p>Then, without another word, she offers you a small, radiant shard—iridescent like a pearl and etched
+                  with delicate lines that seem to mirror the pendant’s mysterious symbols.</p>
+                <p><i>“This belonged to a song long forgotten,”</i> she says. <i>“A verse broken apart when the Veil was
+                    raised. It may find its voice again, through you.”</i></p>
+                <p>You tuck the shard into your satchel, its warmth pulsing faintly beside the pendant and the other
+                  strange relics you’ve gathered. Your journey is beginning to feel less like chance and more like fate.
+                </p>
+                <p>Just as you begin to turn away, the mermaid lifts a finger, her expression turning solemn.</p>
+                <p><i>“There is one more gift, should you have the courage.”</i></p>
+                <p>She beckons toward a cluster of tangled green weeds floating at the water’s edge, their leaves veined
+                  with silver.</p>
+                <p><i>“This is <strong>deepgill weed</strong>,”</i> she says. <i>“If chewed, it will grant you breath
+                    beneath the water—for a short time. Enough, perhaps, to reach the cave below.”</i></p>
+                <p>You blink. <i>“There’s a cave?”</i></p>
+                <p>She nods slowly. <i>“It sleeps in the heart of the lake—hidden in the silt, forgotten by most. But
+                    something waits there. Something lost. A treasure, yes—but not only gold. A fragment of memory.”</i>
+                </p>
+                <p>You stare into the dark waters, heart racing with the thrill of discovery.</p>
+                <p><i>“When you are ready,”</i> she says, <i>“eat the weed and dive. But beware—the lake remembers not
+                    only joy.”</i></p>
+                <p>With that, she sinks below the surface once more, her form dissolving into liquid silver. Only the
+                  deepgill weed remains, gently swaying with the tide.</p>
+                <p>You gather the fronds, the shard, and the strange weed, and step back from the shore—your satchel
+                  heavier, your mind spinning with wonder.</p>
+                <p>The lake is not finished with you. Not yet.</p>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

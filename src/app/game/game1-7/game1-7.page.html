@@ -1,0 +1,78 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                  <h2 class="ion-text-center">~ The Smith of Coins and Questions ~</h2>
+                <p>The sun has risen higher now, casting long shadows through the awnings. The market
+                   is alive with color and barter: laughter, clinking copper, the neigh of a
+                    restless mule tethered near the stables.</p>
+                <p>You pass baskets of fire peppers, hanging herbs drying in the sun, and a girl selling feather charms that twitch in your presence.</p>
+                <p>But then you see him—<strong>old man seated behind a table of nothing but coins.</strong> </p>
+                <p>No produce. No cloth. No wares at all.</p>
+                <p>Just coins—dozens of them, each one different. Ancient. Bent. Faintly glowing with the green-blue gleam of old metal.</p>
+                <p>You feel the pendant stir.</p>
+                <p><i>- “Pick one,” the old man says without looking up.
+“Only one. But it must be the right one.”</i></p>
+                  <p>You pause. “The right one for what?”</p>
+                  <p>He finally looks up, and his eyes are white—not blind, but blank, like stone rubbed smooth by time.</p>
+                  <p><i>- "For remembering"</i></p>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

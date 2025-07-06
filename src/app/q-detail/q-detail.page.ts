@@ -8,7 +8,7 @@ import { Observable, of } from 'rxjs';
 import { DataService, Answer, Message } from '../services/data.service';
 import { addIcons } from 'ionicons';
 import { logoIonic, heart, home, personCircleOutline, cameraOutline, personCircle } from 'ionicons/icons';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-q-detail',
@@ -18,49 +18,57 @@ import { Router } from '@angular/router';
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonCard, IonCardTitle, IonCardContent, AnswersComponent, TimerComponent, IonFooter, IonFab, IonFabButton, IonIcon, IonButtons, IonButton]
 })
 export class QDetailPage implements OnInit {
-  public answer$: Observable<Message> = of(   {
+  public answer$: Observable<Message> = of({
     question: 'Kelly Richardson',
-    answers: {options: [{label: 'What is the capital of Romania?', correct: false}], type: 'single'},
+    answers: { options: [{ label: 'What is the capital of Romania?', correct: false }], type: 'single' },
     date: '2015-02-03',
     id: 7,
     category: "geography"
   });
   private dataService = inject(DataService);
   private router = inject(Router);
+  private route = inject(ActivatedRoute);
   private location = inject(Location);
   public isCorrect: boolean = false;
   public isInCorrect: boolean = false;
 
   constructor() {
-    addIcons({home,personCircle,personCircleOutline,cameraOutline,heart,logoIonic}); 
-    const result = this.dataService.getMessageById(0) || of({});
-    if(result !== null) {
-      this.answer$ = result;
-    }
+    addIcons({ home, personCircle, personCircleOutline, cameraOutline, heart, logoIonic });
   }
 
   ngOnInit() {
-
+    this.route.params.subscribe(params => {
+      const id = +params['id']; // Convert the id to a number
+      const qGroup = params['qGroup']; // Convert the qGroup to a number
+      console.log('Question ID:', id);
+      console.log('Question Group:', qGroup);
+      const result = this.dataService.getMessageById(qGroup, id) || of({});
+      if (result !== null) {
+        this.answer$ = result;
+      }
+    });
   }
 
   goHome(): void {
     this.router.navigateByUrl('/');
   }
-  
+
   timeUp(over: boolean) {
     console.log('Times up');
-    if(over) {
+    if (over) {
       this.location.back();
     }
   }
 
   onAnswerChosen(e: MouseEvent, correct: boolean) {
-    const clickedElement = e.target as HTMLElement;
-    if(correct) {
+    const clickedElement = e.currentTarget as HTMLElement;
+    if (correct) {
       clickedElement.classList.add('green');
+      console.log('Correct answer');
     } else {
       clickedElement.classList.add('red');
+      console.log('Incorrect answer');
     }
-    setTimeout(() => {this.location.back()}, 1300);
+    setTimeout(() => { this.location.back() }, 1300);
   }
 }

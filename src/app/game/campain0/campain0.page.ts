@@ -1,0 +1,80 @@
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { Router } from '@angular/router';
+import { GlowDirective } from 'src/app/directives/glow.directive';
+import { DataService } from 'src/app/services/data.service';
+import { addIcons } from 'ionicons';
+import { DragDropModule, CdkDragMove, CdkDragEnd } from '@angular/cdk/drag-drop';
+
+@Component({
+  selector: 'app-campain0',
+  templateUrl: './campain0.page.html',
+  styleUrls: ['./campain0.page.scss'],
+  standalone: true,
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, DragDropModule, GlowDirective]
+})
+export class Campain0Page implements OnInit {
+  bubbles = ['a', 'b', 'c'];
+  dragOver = false;
+  public questions: any[] = [];
+
+  constructor(private dataService: DataService, private router: Router) { }
+
+  ngOnInit() {
+    this.questions = this.dataService.getMessages('1-4');
+    console.log('q ->', this.questions);
+  }
+
+  @ViewChild('draggable') draggable!: ElementRef;
+  @ViewChild('target') target!: ElementRef;
+
+  onDragMoved(event: CdkDragMove) {
+    // This method is called when the draggable item is moved
+    // You can use this to update the position or perform any logic
+    const isOverlap = this.checkOverlap(
+      event.source.element.nativeElement, this.target.nativeElement
+    );
+    console.log('top:', event.source.element.nativeElement.getBoundingClientRect().top, 'left:', event.source.element.nativeElement.getBoundingClientRect().left);
+    isOverlap ? this.target.nativeElement.classList.add('shake') : this.target.nativeElement.classList.remove('shake');
+  }
+
+  onDragEnded(event: CdkDragEnd, question: any) {
+    const draggedEl = event.source.element.nativeElement;
+    const targetEl = this.target.nativeElement;
+
+    const isDroppedOnTarget = this.checkOverlap(draggedEl, targetEl);
+
+    if (isDroppedOnTarget) {
+      console.log('Dropped on target!');
+      draggedEl.classList.add('dropped');
+      targetEl.classList.remove('shake');
+      const qId = draggedEl.getAttribute('id');
+      if (qId) {
+        this.questionDetail(parseInt(qId, 10));
+      }
+
+      // You can trigger logic here: drop zone logic, emit event, etc.
+    } else {
+      console.log('Not dropped on target');
+    }
+  }
+
+  checkOverlap(el1: HTMLElement, el2: HTMLElement): boolean {
+    const r1 = el1.getBoundingClientRect();
+    const r2 = el2.getBoundingClientRect();
+
+    return !(
+      r1.right < r2.left ||
+      r1.left > r2.right ||
+      r1.bottom < r2.top ||
+      r1.top > r2.bottom
+    );
+  }
+
+  questionDetail(id: number) {
+    console.log('id ->', id);
+    this.router.navigate(['q-detail', '1-4', id]);
+  }
+}

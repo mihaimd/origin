@@ -12,28 +12,32 @@
                 <img src="/assets/game/chapter1/village.jpeg">
               </div>
               <div class="content-content">
-                <h1 class="ion-text-center">Chatpter 1</h1>
-                <h2 class="ion-text-center">~ The Shattererd Veil ~</h2>
-                <p>You try to sleep but the recent discovery of your unknown heritage won't let you rest</p>
-                <p>There are also wierd thoughts of things and places you never thought before:</p>
-                <i>“Is this real, or is my imagination just acting up on me?!”</i>
-                <p>In order for sleep to me you pickup a book the wooden, dusty book shelf:</p>
+                <i>“We told you the truth we knew,” your mother says softly. “We don’t know where you came from. But... there was something else. Something we never understood. We’ve kept it hidden—until now.”</i>
+
+<p>Your father disappears into the attic. When he returns, he carries a bundle wrapped in silk the color of midnight. Reverently, he unfolds it to reveal a strange object:
+A pendant, shaped like an eye with no pupil, etched with symbols that shimmer faintly in the firelight. It pulses once, as if recognizing you.</p>
+
+<i>“We found this beside you in the basket. We didn’t know what it meant. But we always knew, one day, you’d need it.”</i>
+
+<p>As you take the pendant, the world seems to pause. A wave of forgotten voices floods your mind—ancient, distant, whispering your name.
+
+The pendant is warm. It feels like... home.</p>
                 <div class="content-choice">
                   <div class="choice" id="1" (click)="selectOption(1)">
                     <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
-                    <span class="bullet-text">You pick-up a geography book</span>
+                    <span class="bullet-text">📜 A city of lost scrolls and stone scholars</span>
                   </div>
                   <div class="choice" id="2" (click)="selectOption(2)">
                     <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
-                    <span class="bullet-text">You pick-up a history book</span>
+                    <span class="bullet-text"> 🐉 A burning battlefield echoing with ancient war cries</span>
                   </div>
                   <div class="choice" id="3" (click)="selectOption(3)">
                     <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
-                    <span class="bullet-text">You pick-up a natural science book</span>
+                    <span class="bullet-text"> 🌿 A grove older than the sun, guarded by whispering trees</span>
                   </div>
                 </div>
               </div>
-              <div class="content-button">
+              <div class="content-button" (click)="goToNextStep()">
                 <button [class.blue]="true" type="button">
                   <div class="button-text" style="font-size: 21px;">Next</div>
                 </button>

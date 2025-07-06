@@ -1,0 +1,13 @@
+<ion-content [fullscreen]="true" class="center">
+  <div>
+    <div *ngFor="let question of questions" [ngStyle]="{'top': question.top, 'left': question.left}" [id]="question.id" class="ethereal-bubble" (cdkDragMoved)="onDragMoved($event)"
+      (cdkDragEnded)="onDragEnded($event, question)" #draggable cdkDrag>
+      <span class="icon">💡</span>
+    </div>
+  </div>
+
+  <div class="pendant-wrapper" [class.dragging]="dragOver" id="target">
+    <div class="pendant" #target>
+    </div>
+  </div>
+</ion-content>

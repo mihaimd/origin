@@ -1,0 +1,104 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                <h2 class="ion-text-center">~ 🔪 Story Scene: The Weight of the Blade ~</h2>
+                <p>You leave Old Fenna’s stall with a mind teeming with currents and coral—visions of creatures both
+                  known and long-forgotten still shimmering in the corner of your thoughts. The pendant lies still
+                  against your chest, though you feel a deep vibration, like it’s bracing for what’s next.</p>
+                <p>The stone path takes a turn toward the outer ring of the market, where bright colors and fragrant
+                  spices give way to iron hooks, thick gloves, and the scent of salt and blood.</p>
+                <p>The butcher’s stall looms beneath a red awning stained darker by time. There are no displays
+                  here—only slabs of oak and steel. Ropes of sausage hang like garlands, and strips of meat glisten
+                  beside wrapped bundles marked with chalk symbols.</p>
+                <p>Branrik, the butcher, is carving a side of boar when you approach. His arms are thick as tree trunks,
+                  his apron soaked in a day's worth of labor.</p>
+                <p>He looks up with a nod—not friendly, not unkind. Just real.</p>
+                <p><i>“ - You’re late,” he grunts. “Your mother wanted a roast and marrow cuts. You’ll carry them back
+                    yourself.”</i></p>
+                <p>He wraps the meat in waxed cloth, weighing it expertly. Then his eyes narrow.</p>
+                <p><i>“ - You’ve got the look of someone who’s seen through something.”
+                    He leans in, lowering his voice. “Dreams don’t feed a family, boy. Steel does. Blood does. But even
+                    those… come with a price.”</i></p>
+                <p>He lays the bundle down, but keeps his hand on it.</p>
+                <p><i>“ - Tell me something. You ever wonder what must be given for a meal like this to exist? The
+                    stories told in blood and bone?”</i></p>
+                <p>His eyes gleam.</p>
+                <p><i>“Want to hear what the beasts remember?”</i></p>
+                <p>He pulls out three carved bone tokens from a jar behind the stall. Each one is shaped like a
+                  creature’s tooth.</p>
+                <p><i>“Pick one. Each bite holds memory, if you’ve the mind to chew it.”</i></p>
+                <div class="content-choice">
+                  <div class="choice" id="1" (click)="selectOption(1)">
+                    <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🐗 Boar’s tusk – Knowledge of wild beasts and foraging creatures</span>
+                  </div>
+                  <div class="choice" id="2" (click)="selectOption(2)">
+                    <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🐺 Wolf fang – Predators, instincts, survival lore</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🐄 Ox horn shard – Domesticated animals, farming, and trade</span>
+                  </div>
+                </div>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

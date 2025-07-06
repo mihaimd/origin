@@ -1,0 +1,103 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                <h2 class="ion-text-center">~ 🌾 The Missing Root ~</h2>
+                <p>You gently lift the bundle your mother requested, wrapping it into the satchel with care. But just as
+                  you’re about to thank Healer Aranel and leave, her brow furrows.</p>
+                <p>She moves to a shelf in the far corner, lifting the lid of a small clay jar.</p>
+                <p><i>“- Hm,” she murmurs. “No scent. That’s not right.”</i></p>
+                <p>She looks back at you, her fingers brushing lightly across a set of small parchment labels.</p>
+                <p><i>“ - Your father’s ointment,” she says. “He’s been using it for his joints, yes? I made the last
+                    batch with cloud nettle root—but the stores are empty. And the new delivery hasn’t come down from
+                    the hills.”</i></p>
+                <p>She sighs, then smiles—calm, but expectant.</p>
+                <p><i>“If you have time, would you fetch it for me? You remember the path—east, toward the stream past
+                    the willow break. It only grows in shaded places where the water sings and the trees forget to
+                    speak.”</i></p>
+                <p>She presses a small wooden blade into your hand—a forager’s knife, etched with runes to guide you.
+                </p>
+                <p><i>“Bring back only what calls to you. The root hides if it senses greed.”</i></p>
+                <p>You nod and turn to go, the satchel on your back now carrying not just herbs but intent.</p>
+                <p><i>“Oh—and one more thing,” she calls after you.<br />“Be careful where the moss glows blue. That
+                    means you’re close… but not alone.”</i></p>
+                <p>As you step into the outer grove, sunlight dapples the leaves. You come across three natural
+                  features, each seemingly humming with unseen presence:</p>
+
+                <div class="content-choice">
+                  <div class="choice" id="1" (click)="selectOption(1)">
+                    <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🪨 A ring of mossy stones – Roots grow deep in shaded soil between
+                      them</span>
+                  </div>
+                  <div class="choice" id="2" (click)="selectOption(2)">
+                    <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🌳 A hollow tree filled with blue mushrooms – Strange but fragrant,
+                      pulsing faintly in the dark</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🌾 A fern-covered stream bank – Glints of water and spidery roots trail
+                      like veins in the mud</span>
+                  </div>
+                </div>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

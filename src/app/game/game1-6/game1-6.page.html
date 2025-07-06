@@ -1,0 +1,86 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                  <h2 class="ion-text-center">~ Mira the Greengrower ~</h2>
+                <p>As you take the plum, a warmth spreads through your fingers, and the world around you seems to shift. The air thickens with the scent of spices and the sound of distant laughter echoes in your ears.</p>
+                <p>“You’ve been having those dreams again, haven’t you?” Mira asks, her eyes narrowing slightly. “The ones of places you’ve never been?”</p>
+                <p>You nod, feeling a strange connection to the fruit in your hand. It feels like it holds secrets, like it’s a key to something you can’t quite grasp.</p>
+                <p>“Take it,” she says, her voice softening. “It’s a gift. You’ll need it for what’s to come.”</p>
+                <p>As you tuck the plum into your satchel, you feel a sense of purpose. The pendant around your neck pulses gently, as if in agreement with Mira’s words.</p>
+                <p>“Remember,” she adds, “the world is full of wonders and dangers. Trust your instincts, and don’t be afraid to seek out the truth.”</p>
+                <p>With a final nod, you turn to leave, the weight of the plum in your satchel a comforting presence. The market bustles around you, but your mind is already drifting to the mysteries that lie ahead.</p>
+                <div class="content-choice">
+                  <div class="choice" id="1" (click)="selectOption(1)">
+                    <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
+                    <span class="bullet-text">📜 A city of lost scrolls and stone scholars</span>
+                  </div>
+                  <div class="choice" id="2" (click)="selectOption(2)">
+                    <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
+                    <span class="bullet-text"> 🐉 A burning battlefield echoing with ancient war cries</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text"> 🌿 A grove older than the sun, guarded by whispering trees</span>
+                  </div>
+                </div>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,96 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                                <h2 class="ion-text-center">~ 🍎 The Market of Lorynth ~</h2>
+                <p>The dawn breaks slowly over Eriterra, casting a golden hush upon the rooftops of Lorynth. The sky is pale blue, the kind that promises warmth, but your heart remains a tangle of cold thoughts.</p>
+                <p>The pendant lies quiet against your chest, its faint pulse from the night before gone still. You don’t know whether to feel relieved or abandoned.</p>
+                <p>Your mother’s voice calls softly through the cottage door.</p>
+                <p><i>“Before you vanish into your thoughts again, love, take this coin pouch and fetch some fruit and root for supper. We’ll need them before the market clears.”</i></p>
+                <p>You hesitate. After all that happened, going to the market feels… trivial. But the ordinary has a strange gravity. Perhaps it will ground you.</p>
+                <div class="content-choice">
+                  <div class="choice" id="1" (click)="selectOption(1)">
+                    <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🧺 Help the fruit vendor organize her baskets</span>
+                  </div>
+                  <div class="choice" id="2" (click)="selectOption(2)">
+                    <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🐟 Guess the weight of the fish at the fishmonger’s stall</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🔥 Sharpen a practice blade with the blacksmith’s apprentice</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🍖 Choose the right meat cuts for tonight’s stew</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🍯 Swap stories with the honey seller</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🏺 Inspect a rare vase with your potter friend</span>
+                  </div>
+                </div>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

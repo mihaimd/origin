@@ -1,0 +1,105 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                <h2 class="ion-text-center">~ 🍋 Story Scene: The Stand Beneath the Golden Tree ~</h2>
+                <p>The satchel on your shoulder grows heavier with every step—fruit, meat, herbs, and truths you didn’t
+                  ask for. The village around you blurs beneath the weight of new thoughts.</p>
+                <p>Just when the heat becomes too much—both from the sun and the furnace of your mind—you spot it.</p>
+                <p>Nestled between the herbalist’s stall and a seller of silks, beneath the canopy of a blooming
+                  goldenleaf tree, stands a small lemonade stand. The air around it is cool, touched by the scent of
+                  mint, citrus, and the faintest whisper of rain.</p>
+                <p>A girl about your age stands behind the cart. Her name is Lira, a distant cousin of Mira the
+                  greengrower, known more for her clever mind than her conversation. She looks up as you approach, her
+                  amber eyes bright in the dappled sunlight.</p>
+                <p><i>“ - You look like someone who’s been chasing questions through fire,” she says, offering you a
+                    wooden cup filled with pale yellow lemonade and sprigs of silverleaf."</i></p>
+                <p>You take a sip. It’s shockingly cold. Sharply sweet. The kind of drink that makes the world stop
+                  spinning for just a moment.</p>
+                <p><i>“People say I just sell lemonade,” Lira murmurs, leaning on her elbow. “But I steep it in the
+                    water from the deepwell spring—the one that touches the roots of the <strong>Old Grove</strong>.”
+                    She lowers her voice. “That water… remembers.”</i></p>
+                <p>As you drink, you feel something shift. Not a vision—a clarity. A focus. The sun catches the pendant,
+                  and for a flash, you see reflections of yourself in other places. Other lives.</p>
+                <p>Lira notices the look in your eyes. <i>“ - The spring never lies. Whatever it's showing you… you were
+                    meant to see.”</i></p>
+                <p>Lira slides a small tray toward you. On it are three flavored droplets, each glimmering like dew,
+                  resting in hollowed lemon peels.</p>
+                <p><i>“ - Choose one. Each will stir a memory from far, far away… brought to you by the water beneath
+                    the world.”</i></p>
+                <div class="content-choice">
+                  <div class="choice" id="1" (click)="selectOption(1)">
+                    <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🍊 Sunfruit drop – Memories of foreign lands, travel, and culture</span>
+                  </div>
+                  <div class="choice" id="2" (click)="selectOption(2)">
+                    <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🌿 Mintroot drop – Knowledge of healing, herbalism, and ancient
+                      remedies</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🫖 Spicebloom drop – Trade, exotic ingredients, and historical
+                      cuisine</span>
+                  </div>
+                </div>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

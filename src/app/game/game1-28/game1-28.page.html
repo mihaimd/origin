@@ -1,0 +1,106 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                <h2 class="ion-text-center">~ ⚡ Story Scene: The Cave That Breathes ~</h2>
+                <p>You choose your path, and the fish scatter—racing ahead like silver comets. You follow them through
+                  swaying curtains of kelp and past sunken stones marked by time and water. The light dims as you
+                  descend, but your pendant glows brighter with every stroke.</p>
+                <p>The fish vanish into the shadows ahead, and then… you see it.</p>
+                <p>The mouth of the cave yawns open like a wound in the lakebed—carved stone overgrown with moss and
+                  coral. Strange symbols flicker faintly along its edges, pulsing in time with your heartbeat.</p>
+                <p>You drift closer, the pressure of the deep tightening around you. Just beyond the entrance, you spot
+                  something gleaming—<strong>a treasure chest</strong>, half-buried in the sand, wrapped in chains of
+                  silver and coral.</p>
+                <p>But before you can move closer, the water trembles.</p>
+                <p>From behind the chest, something slithers into view—long, thick, and pulsing with streaks of bright
+                  blue light. A <strong>giant electric eel</strong>, easily twice your size, coils around the treasure
+                  with eerie grace. Its eyes glow with unnatural intelligence, and arcs of static flicker along its
+                  slick body.</p>
+                <p>It doesn’t strike, but it watches you. Waiting.</p>
+                <p>You hover there, heart pounding. You know you cannot defeat it with strength. The eel is ancient,
+                  powerful, and attuned to the magic of the lake. To reach the treasure, you must be clever—patient—and
+                  outthink the guardian.</p>
+                <p>The pendant warms against your chest. You realize the eel reacts not to movement, but to energy. Too
+                  much force, and it surges with lightning. But there must be a way to move without disturbing its
+                  current…</p>
+                <div class="content-choice">
+                  <div class="choice" id="1" (click)="selectOption(1)">
+                    <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🔍 <strong>Observe the eel’s patterns</strong> – Watch for a moment when
+                      its energy pulses weaken, and move in sync with its flow. Triggers a quiz about **animal behavior
+                      and biology**.</span>
+                  </div>
+                  <div class="choice" id="2" (click)="selectOption(2)">
+                    <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🌟🪙 <strong>Toss a shiny object into the water</strong> – Distract it
+                      with something from your satchel and retrieve the treasure while it investigates. Triggers a quiz
+                      about **physics and motion**.</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🎼 <strong>Use the melody from the shard</strong> – Play the song of the
+                      deep using the shell shard the mermaid gave you. Triggers a quiz about **music, sound, and
+                      vibrations**.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

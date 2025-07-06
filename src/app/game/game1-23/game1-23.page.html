@@ -1,0 +1,111 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                <h2 class="ion-text-center">~ 🧚  ~</h2>
+                <p>The moonseed glows faintly in your palm as you approach the edge of the hollow. The air here feels
+                  colder, stiller—like the forest is holding its breath.</p>
+                <p>You kneel at the roots of a gnarled tree, its bark slick with dew, and press the seed into a crevice
+                  just above the soil. As it touches the earth, a soft pulse ripples outward, like a heartbeat in the
+                  ground. The surrounding shadows ease, just slightly.</p>
+                <p>The fairy appears again, hovering in silence for a moment. Her wings flutter in slow, deliberate
+                  motion.</p>
+                <p><i>“You have honored the grove,”</i> she says. <i>“When the time comes, and your path grows dark, I
+                    will be there. Not before. Not after. But exactly when you need me.”</i></p>
+                <p>She lifts a hand, and a faint silver mark appears just above your wrist—a delicate swirl of leaves
+                  and stars.</p>
+                <p><i>“This will call me, should the need arise.”</i></p>
+                <p>Then, with a final shimmer, she vanishes into the leaves, her presence fading like dew at dawn.</p>
+                <p>You gather the cloud nettle root, carefully wrapping it in cloth, and begin the walk back to the
+                  healer’s cottage. The grove feels calmer now. Grateful.</p>
+                <p>By the time you return, morning has deepened into late day. Healer Aranel waits just outside her
+                  door, hanging bundles of dried sage in the sun.</p>
+                <p><i>“You were gone longer than expected,”</i> she says, turning to you with a knowing look.</p>
+                <p>You explain what happened—the glowing moss, the fairy, the hollow, the moonseed warding. Her
+                  expression doesn’t change, but her eyes shimmer with something between recognition and respect.</p>
+                <p><i>“So, the old magic stirs even in the quiet corners,”</i> she murmurs. <i>“And you… you are
+                    beginning to walk between what is and what was.”</i></p>
+                <p>She takes the cloud nettle root from your hands, brushes your wrist gently, and glances at the faint
+                  silver marking.</p>
+                <p><i>“This is a sign. Not of power—but of promise. You are remembered, even by those who live beyond
+                    the Veil of memory.”</i></p>
+                <p>She turns and walks inside, beckoning you to follow.</p>
+                <p><i>“Come. There’s still more to do before the day ends. And more you need to know… before your path
+                    truly begins.”</i></p>
+                <p>Inside, Healer Aranel places three herbs before you. Each glows faintly, reacting to the mark on your wrist. She smiles.</p>
+                <p><i>“Choose one. Each leaf carries a lesson from the ancient roots of the world.”</i></p>
+                <div class="content-choice">
+                  <div class="choice" id="1" (click)="selectOption(1)">
+                    <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🌿 <strong>Everwhisper Leaf</strong> – Unlocks a quiz on ancient forest lore and druidic knowledge</span>
+                  </div>
+                  <div class="choice" id="2" (click)="selectOption(2)">
+                    <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🌸 <strong>Blightbloom Petal</strong> – Leads to questions on poisons, antidotes, and survival
+                      roots</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🌾 <strong>Stargrass Blade</strong> – Tests knowledge of magical plants, lunar cycles, and herbal myths</span>
+                  </div>
+                </div>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

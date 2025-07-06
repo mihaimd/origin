@@ -1,0 +1,110 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                <h2 class="ion-text-center">~ 🧚 The Hidden Glade and the Fairy's Request ~</h2>
+                <p>You crouch low beneath the canopy, the light thinning to a gentle green hush as you approach the
+                  fern-covered stream bank. The pendant at your neck glows softly, in rhythm with the trickling water.
+                </p>
+                <p>You recognize the cloud nettle immediately—<strong>tall, with silver-veined leaves</strong> and a
+                  faint purple bloom at the base. You draw the forager’s blade and dig gently at its roots, careful not
+                  to sever them.</p>
+                <p>But just as your blade touches the soil, <strong>the air changes.</strong></p>
+                <p>A soft trill—like the sound of wind through a flute—floats through the grove.</p>
+                <p>You rise, slowly.</p>
+                <p>Across the stream, perched on the rim of a twisted flower bulb, hovers a creature of light and thread
+                  and shimmer. Wings like silk, hair like spun copper, eyes deep as starlit pools.</p>
+                <p>A fairy.</p>
+                <p><i>“You take what grows,” she says, voice delicate and sure, “but do you know what it cost to
+                    bloom?”</i></p>
+                <p>You open your mouth, unsure of what to say.</p>
+                <p>She lifts her chin.</p>
+                <p>“This grove is sacred to us. We let the root grow here, though its power tempts many. But lately…”
+                  she pauses, expression dimming, “...a sickness spreads from the eastern hollow. Something is waking
+                  beneath the soil that should not.”</p>
+                <p>She flutters closer, hovering just out of reach.</p>
+                <p><i>“ - I do not ask you to fight, human. But if you would earn the root truly, help us. Place one of
+                    our moonseed wards along the hollow’s edge. It will not drive the dark back—but it may keep it
+                    sleeping a little longer.”</i></p>
+                <p>She drifts down to a mossy stone and opens a pouch woven from leaf and light. Inside are three
+                  glowing seeds.</p>
+                <p>The fairy meets your gaze, her expression suddenly softer.</p>
+                <p><i>“ - You are not just a boy of Eritea. The land knows it. The Veil stirs. Even here, in silence,
+                    the world waits.”</i></p>
+                <div class="content-choice">
+                  <div class="choice" id="1" (click)="selectOption(1)">
+                    <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
+                    <span class="bullet-text">✨ Silver Moonseed – Wards dreams, tied to memory and unseen
+                      thoughts</span>
+                  </div>
+                  <div class="choice" id="2" (click)="selectOption(2)">
+                    <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🌕 Golden Moonseed – Protects the land, resonates with ancient
+                      roots</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🌑 Obsidian Moonseed – Holds darkness in balance, calls on strength of
+                      will</span>
+                  </div>
+                </div>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

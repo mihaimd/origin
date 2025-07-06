@@ -1,0 +1,111 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                <h2 class="ion-text-center">~ 🌿 Story Scene: The Whispering Leaves ~</h2>
+                <p>Morning light filters softly through the cottage window, catching the edge of the pendant as it hangs
+                  from your bedpost. It flickers faintly, like it dreamed alongside you.</p>
+                <p>Downstairs, your mother moves quietly. You smell porridge and rosemary, hear the creak of the kettle,
+                  the gentle hum of a lullaby she hasn’t sung since you were small.</p>
+                <p>You sit down to eat in silence. She watches you with that kind of mother’s look that says everything
+                  and asks nothing.</p>
+                <p>Then she places a small satchel beside your bowl.</p>
+                <p>“We’re low on heartleaf and thistlebud,” she says gently. “Can you go to Healer Aranel before the dew
+                  burns off?”</p>
+                <p>You nod. A simple task. A familiar one.</p>
+                <p>Almost comforting.</p>
+                <p>You sling the satchel over your shoulder and step into the cool air. The village is quieter in the
+                  morning, like it’s still remembering itself. You walk a narrow path that winds behind the mill, down
+                  into a grove of sun-dappled ash trees.</p>
+                <p>The healer’s cottage sits nestled beneath a weeping willow, its branches touching the roof like
+                  blessings. Vines grow along the stone walls. Tiny bells chime in the windows. You’ve been here many
+                  times—but today, everything feels more alive.</p>
+                <p>The door creaks open before you knock.</p>
+                <p>Inside, Healer Aranel waits—tall, willow-slim, her hair like a silver braid of moonlight. She’s not
+                  old, not young. Not quite part of time at all.</p>
+                <p>She smiles faintly.</p>
+                <p><i>“I thought you'd come,” she says. “Your mother always remembers the right herbs before the winds
+                    shift.”</i></p>
+                <p>She gestures toward her long worktable, lined with jars, bundles of dried plants, and bowls of
+                  pulsing moss.</p>
+                <p><i>“But before you take what she needs… perhaps you should take something you need as well.”</i></p>
+                <p>She places three bundles of herbs before you, wrapped in silk, each tied with a color-coded thread:
+                </p>
+
+                <div class="content-choice">
+                  <div class="choice" id="1" (click)="selectOption(1)">
+                    <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
+                    <span class="bullet-text">💜 Bundle of Heartleaf and Lavender – Remedies and emotions, the healing
+                      of sorrow and spirit</span>
+                  </div>
+                  <div class="choice" id="2" (click)="selectOption(2)">
+                    <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
+                    <span class="bullet-text">💚 Bundle of Sage and Thornmint – Protection, purification, and knowledge
+                      of plants with edge and wisdom</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🤍 Bundle of Cloudblossom and White Root – Rare herbs said to enhance
+                      memory and dreams</span>
+                  </div>
+                </div>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,102 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                <h2 class="ion-text-center">~ 🔥 The Forge That Remembers ~</h2>
+                <p>The crowd thins as you move past the stonemason’s booth. Behind a curtain of
+                  thick smoke and the ringing of steel, you find yourself at the edge of the
+                  Forge of Jorek, Lorynth’s blacksmith and quiet giant of a man.</p>
+                <p>The forge is alive—its breath loud and fiery, casting waves of heat that dance across your skin.
+                  Sparks leap and vanish like fireflies meeting their end.</p>
+                <p>Jorek stands behind the anvil, hammering iron into shape with a rhythm older than language.</p>
+                <p>He doesn’t glance up, but somehow, he knows.</p>
+                <p><i>"- You’ve seen things now, haven’t you?"</i></p>
+                <p>You hesitate, then nod. The pendant stirs faintly against your chest, pulsing like a second
+                  heartbeat.</p>
+                <p><i>"Aye,” Jorek mutters, pulling the metal from the flame. “When the Veil begins to thin, some
+                    remember. And some are remembered."</i></p>
+                <p>He plunges the iron into a trough of water. Steam howls up.</p>
+                <p><i>"What you carry isn't meant to stay unchanged. Memory, like steel, needs shaping."</i></p>
+                <p>He gestures toward a heavy wooden workbench nearby. Upon it sit three raw metal forms—unfinished,
+                  waiting. Nearby lies a toolkit of memory-forging instruments, etched with arcane symbols. You’ve never
+                  seen anything like them.</p>
+                <p>You’ve come from elsewhere, whether you know it or not. The world will soon ask who you are.
+                  But first… you must choose what you become.</p>
+                <h3>Shape Your Memory</h3>
+                <p>Jorek slides the metal blanks toward you.</p>
+                <p><i>“ - These are more than shapes. They’re questions. What you forge now will shape the truths you uncover next.”</i></p>
+                <p>Choose a form to bind with the pendant:</p>
+                <div class="content-choice">
+                  <div class="choice" id="1" (click)="selectOption(1)">
+                    <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🛡️ A memory sigil shaped like a shield – To defend what matters most</span>
+                  </div>
+                  <div class="choice" id="2" (click)="selectOption(2)">
+                    <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🗝️ A memory sigil shaped like a key – To unlock hidden paths</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🔥 A memory sigil shaped like a flame – To ignite the truth within</span>
+                  </div>
+                </div>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

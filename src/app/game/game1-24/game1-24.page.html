@@ -1,0 +1,125 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                <h2 class="ion-text-center">~ 🍯 The Hive’s Request ~</h2>
+                <p>The sun hangs low in the sky by the time you return home, a quiet orange glow stretching over the
+                  rooftops of Lorynth.</p>
+                <p>Inside the cottage, your mother hums softly as she stirs a pot of broth. Your father sits by the
+                  hearth, rubbing his
+                  knees absently—his usual chair wrapped in a woven blanket.</p>
+                <p>You approach and hand him the small jar of ointment from Healer Aranel. He takes it with a grunt of
+                  thanks, twisting
+                  the lid with careful hands.</p>
+                <p><i>“Smells strong. She’s good at what she does, that Aranel,”</i> he says. <i>“Should help with the
+                    joints before the
+                    cold sets in.”</i></p>
+                <p>He leans back, letting the warmth of the fire settle into his bones. Then he looks at you and raises
+                  an eyebrow.</p>
+                <p><i>“Since you’re still full of energy, how about one more errand?”</i> he says with a smirk.
+                  <i>“We’re out of honey.
+                    The hive in the grove behind the cottage should have plenty this time of year.”</i>
+                </p>
+                <p>You nod, grabbing a small wooden pot and setting off once again, this time toward the edge of the
+                  property where the
+                  grass gives way to wildflowers and the sweet hum of bees fills the air.</p>
+                <p>The hive is nestled in an old, hollow tree. Golden light spills from the cracks in the bark like
+                  liquid sunlight. The
+                  air is warm, thick with the scent of clover and pollen.</p>
+                <p>You approach slowly, as your father taught you, careful and calm. But just as you reach to collect
+                  the honeycomb, a
+                  sudden silence falls over the grove.</p>
+                <p>Then—**she** appears.</p>
+                <p>Not crawling from the hive, but **rising** from it—an elegant figure formed of golden light and
+                  glimmering wings,
+                  with eyes like drops of amber and a voice that thrums in the bones.</p>
+                <p><i>“You would take from the hive,”</i> she says, not unkindly. <i>“But the hive, too, has need.”</i>
+                </p>
+                <p>You step back, heart pounding. She hovers in the air, regal and strange. The **Queen Bee**.</p>
+                <p><i>“A shadow has crept into our foraging grounds,”</i> she continues. <i>“Something spoils the
+                    nectar, dulls the song
+                    of the flowers. We do not ask for battle—but for aid. Will you help us restore the bloom?”</i></p>
+                <p>You nod slowly. You’ve never spoken with a bee—let alone a queen. But something about her presence
+                  feels ancient,
+                  like it echoes the same strange familiarity as the pendant around your neck.</p>
+                <p><i>“Then choose how you will help us,”</i> she says, and extends three glowing drops of honey—each
+                  floating before
+                  you like golden stars.</p>
+                <p>Each honey drop pulses with a different light, representing a different path of help:</p>
+                <div class="content-choice">
+                  <div class="choice" id="1" (click)="selectOption(1)">
+                    <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🍯 <strong>Sun-Drop</strong> – Strengthen the flowers: leads to trivia
+                      about plant biology and pollination</span>
+                  </div>
+                  <div class="choice" id="2" (click)="selectOption(2)">
+                    <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🐝 <strong>Moon-Drop</strong> – Track the corrupted nectar: opens questions
+                      about environmental science and ecosystems</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🌼 <strong>Star-Drop</strong> – Communicate with other hives: reveals quiz
+                      questions about social insects and animal behavior</span>
+                  </div>
+                </div>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

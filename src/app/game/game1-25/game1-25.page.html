@@ -1,0 +1,112 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                <h2 class="ion-text-center">~ 🌊 The Whispering Lake ~</h2>
+                <p>The morning sun glints silver on the still waters of Lake Viralis, casting long reflections of sky
+                  and tree upon the surface. Mist curls low along the shore, and the wind carries the scent of lilies
+                  and cool stone.</p>
+                <p>Your feet press softly into the muddy banks as you crouch beside the water’s edge. Healer Aranel had
+                  mentioned a rare aquatic herb—<strong>skyroot frond</strong>—which blooms only beneath the water’s
+                  surface in the morning light.</p>
+                <p>You roll up your sleeves and reach into the shimmering water, fingers brushing the reeds. The water
+                  is colder than expected, deep and endless, as though the lake itself is watching you.</p>
+                <p>A ripple breaks the surface. Then another.</p>
+                <p>Suddenly, a song—wordless, haunting—rises from the mist.</p>
+                <p>You pull your hand back quickly and rise to your feet as a figure emerges from the lake. Not walking,
+                  not swimming—but gliding just beneath the surface.</p>
+                <p>She is unlike anything you've ever seen—her skin is pale as pearl, hair flowing like riverweed, and
+                  eyes shimmering with shifting blues and greens. A <strong>mermaid</strong>.</p>
+                <p>She watches you in silence for a moment, then speaks, her voice like the echo of water in a cave.</p>
+                <p><i>“You reach for the frond of the lake… but the lake reaches back.”</i></p>
+                <p>You don’t know whether to speak or run, but her gaze holds you steady—not threatening, but solemn.
+                </p>
+                <p><i>“Few walk this shore with the mark of memory,”</i> she says, glancing to the faint silver symbol
+                  still glowing on your wrist. <i>“And fewer still can hear the songs of the deep.”</i></p>
+                <p>She dips beneath the surface and rises again, holding a small cluster of glowing skyroot fronds,
+                  their tips dripping silver light.</p>
+                <p><i>“I will give these to you. But in return, I ask your aid.”</i></p>
+                <p>You step closer, curiosity outweighing fear.</p>
+                <p><i>“There are questions hidden in the depths,”</i> she whispers. <i>“Traces of the world before the
+                    Veil. I will give you a piece of the song if you answer one of our riddles.”</i></p>
+                <p>She lifts her hand, and three bubbles rise from the water—each glowing with a different light, each
+                  pulsing with a quiet sound.</p>
+                <p>Each bubble holds a question from the old world, tied to knowledge long forgotten. Choose one to
+                  answer:</p>
+                <div class="content-choice">
+                  <div class="choice" id="1" (click)="selectOption(1)">
+                    <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🌊 <strong>Blue Bubble</strong> – Reveals a trivia memory about oceans and
+                      aquatic creatures</span>
+                  </div>
+                  <div class="choice" id="2" (click)="selectOption(2)">
+                    <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🌿 <strong>Green Bubble</strong> – Reveals a trivia memory about
+                      water-based plants and healing herbs</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🔱 <strong>Golden Bubble</strong> – Reveals a trivia memory about myths
+                      and sea legends</span>
+                  </div>
+                </div>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

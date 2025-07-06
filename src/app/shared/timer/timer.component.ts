@@ -18,7 +18,7 @@ export class TimerComponent  implements OnInit {
   runAnimation() {
     setInterval(() => {
       this.initTime++;
-      if(this.initTime === 20){
+      if(this.initTime === 200){
         this.timeUp.emit(true);
       }
     }, 1000)

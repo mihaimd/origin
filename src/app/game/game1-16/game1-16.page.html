@@ -1,0 +1,109 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                <h2 class="ion-text-center">~ 🎪 Story Scene: The Dance of Air and Flame ~</h2>
+                <p>The lemonade slides down your throat like liquid sunlight—cool and bright and strangely grounding.
+                  You exhale, for what feels like the first time that day.</p>
+                <p>You glance to the side, just as a ripple of applause rises from the village square.</p>
+                <p>There, framed by the colorful streamers strung between food carts and hanging lanterns, is a circle
+                  of space cleared for performance. A few crates mark the edge of the makeshift stage, and standing in
+                  the center are two figures: a tall man in a crimson vest, and beside him, a small girl no older than
+                  ten.</p>
+                <p>The girl grins, hands outstretched, her fingers tipped with silver caps. With a sudden movement, she
+                  flips backward onto her hands, balancing perfectly as her father tosses her a pair of flaming rings.
+                </p>
+                <p>She catches them mid-air without even looking.</p>
+                <p>Lira leans toward you, still sipping her own cup.</p>
+                <p><i>“ - That’s Kael and Anya. They’ve performed here since before I was born. Said they were just
+                    passing through one day… but never left.”</i></p>
+                <p>The father—Kael—bows low. Anya vaults onto his shoulders, balancing on one foot. The fire rings spin
+                  around her, leaving trails of gold in the air.</p>
+                <p>The crowd claps, enchanted. And you…
+                  you feel something stir.</p>
+                <p>Not a vision. Not a memory. But a yearning.
+                  The way they move—like wind and rhythm, like freedom.</p>
+                <p>You blink—and for the briefest moment, Anya’s eyes flash silver, and she’s looking straight at you.
+                </p>
+                <p>She winks.</p>
+                <p>Then flips down, lands lightly, and the crowd erupts in cheer.</p>
+                <p>Kael walks toward the edge of the circle, his daughter now perched on one arm.</p>
+                <p><i>“ - We were meant to entertain,” he says with a smile. “But those who really watch… they
+                    remember.”</i></p>
+                <p>He holds up three small juggling balls. Each glows faintly—blue, green, and gold.</p>
+                <p><i>“Pick one. Let’s see if your mind dances like your thoughts do.”</i></p>
+                <div class="content-choice">
+                  <div class="choice" id="1" (click)="selectOption(1)">
+                    <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🔵 Blue Sphere – Trivia about motion, physics, and coordination</span>
+                  </div>
+                  <div class="choice" id="2" (click)="selectOption(2)">
+                    <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🟢 Green Sphere – Body, balance, biology of movement</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🟡 Gold Sphere – The history of games, performance, and
+                      storytelling</span>
+                  </div>
+                </div>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

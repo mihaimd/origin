@@ -1,0 +1,109 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                <h2 class="ion-text-center">~ 🏺 The Clay That Holds the Shape ~</h2>
+                <p>With sweet warmth lingering on your tongue, you step away from Gramma Thistle’s cart,
+                  ready—perhaps—for the first time today, to finally return home.</p>
+                <p>The sun dips lower behind the hills, casting long amber shadows across the cobblestone streets.
+                  Merchants begin to pack their goods. Children chase each other between the stalls with the last of
+                  their festival sweets. The town breathes a little slower now.</p>
+                <p>Then you hear it—a deep, rhythmic thud, soft as a heartbeat in wet earth.</p>
+                <p>You turn the corner near the edge of the square and find <strong>Tiren</strong>, your friend since
+                  childhood, seated
+                  at his small pottery wheel beneath a faded canvas tent. His stall is smaller than most, but he keeps
+                  it spotless—shelves lined with clay vessels, painted plates, and delicate cups that shimmer with blue
+                  glaze.</p>
+                <p><i>“- You’re still out here?” you ask.</i></p>
+                <p>He grins, his hands already caked in clay.</p>
+                <p><i>“ - Market never ends if the work hasn’t.” He pauses, studying your face. “You look…
+                    different.”</i></p>
+                <p>You smile faintly, tired.</p>
+                <p><i>"I am."</i></p>
+                <p>Tiren nods like he understands more than he says, then gestures to a nearby stool.</p>
+                <p><i>“Sit. Talk. Let your head settle while your feet rest.”</i></p>
+                <p>You do. The wheel spins, and he shapes a lump of clay into something resembling a jar. Steam rises
+                  from a nearby kettle. The scent of warm chamomile and earth floats between you.</p>
+                <p><i>“My father says clay remembers the hands that shaped it,” Tiren murmurs. “Sometimes I wonder… if
+                    we’re made of the same stuff.”</i></p>
+                <p><i>He sets the jar aside and reaches into a wooden box, pulling out three tiny ceramic tokens, each
+                    no bigger than a coin. He sets them on the bench beside you.</i></p>
+                <p><i>“I made these while thinking of you. Back before anything changed.”</i></p>
+                <p>You pick one up. It’s warm.</p>
+                <div class="content-choice">
+                  <div class="choice" id="1" (click)="selectOption(1)">
+                    <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🌀 A spiral disc – Evokes stories of creation, time, and ancient
+                      craftsmanship</span>
+                  </div>
+                  <div class="choice" id="2" (click)="selectOption(2)">
+                    <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🌿 A leaf-shaped tile – Stirs knowledge of nature, growth, and organic
+                      design</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🧠 A mask-shaped charm – Leads to questions of identity, art, and human
+                      expression</span>
+                  </div>
+                </div>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

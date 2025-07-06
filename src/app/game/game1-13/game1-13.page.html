@@ -1,0 +1,98 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                <h2 class="ion-text-center">~ 🐟 Story Scene: The Scales Beneath the Surface ~</h2>
+                <p>Leaving the forge behind, the hum of the pendant slowly settles, but your thoughts do not. Everywhere
+                  you look, the market feels stranger than before—not because it has changed, but because you have.</p>
+                <p>The path winds past the baker’s stall, past jars of glowing amber honey and stacks of golden loaves,
+                  until you’re met with a sudden burst of sea-scented air.</p>
+                <p>A long table lined with chipped blue tile sits under a tattered sailcloth canopy. Bowls of water
+                  glisten in the sun, each holding a different kind of fish—some familiar, others… impossible.</p>
+                <p>One has scales like silver leaves.</p>
+                <p>Another, fins that pulse with bioluminescence.</p>
+                <p>A third blinks at you with two pairs of eyes.</p>
+                <p>Behind the stall stands Old Fenna, the fishmonger. You know her only by the sound of her voice at
+                  dawn and the way her boots slosh when she walks through town.</p>
+                <p>She watches you approach with a crooked smile and says:</p>
+                <p><i>“ - Not every mystery lies in the sky, child. Some sleep below the surface, waiting to be
+                    remembered.”</i></p>
+                <p>She reaches under the table and pulls out a net made of glass-thread. Inside, a shell pulses with a
+                  faint glow.</p>
+                <p><i>“ - This one’s not for sale,” she says. “But if you can answer the river’s memory… it might open
+                    itself to you.”</i></p>
+                <p>Old Fenna gestures to three water basins, each containing a curious aquatic creature:</p>    
+                <div class="content-choice">
+                  <div class="choice" id="1" (click)="selectOption(1)">
+                    <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🐠 A shimmering riverfish with translucent fins – freshwater knowledge</span>
+                  </div>
+                  <div class="choice" id="2" (click)="selectOption(2)">
+                    <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🐙 A blue-shelled cephalopod curling over stones – oceanic mystery</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🐊 A strange lizardlike creature resting half-submerged – amphibians and aquatic evolution</span>
+                  </div>
+                </div>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

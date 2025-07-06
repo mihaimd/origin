@@ -1,0 +1,101 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                <h2 class="ion-text-center">~ 🐟 Beneath the Glass Veil ~</h2>
+                <p>You hold the shimmering leaf of <strong>deepgill weed</strong> in your hand, its silver veins pulsing
+                  softly like a heartbeat. With a deep breath, you place it on your tongue and chew.</p>
+                <p>The taste is sharp—like mint and iron—but as you swallow, a strange warmth spreads through your
+                  chest. You inhale once more… and your lungs accept the water like air.</p>
+                <p>Stepping into the lake, you slip beneath the surface. The world above fades into rippling light, and
+                  a profound stillness surrounds you. Threads of sunlight pierce the depths, painting the lakebed with
+                  moving lace.</p>
+                <p>As you descend deeper, you pass drifting moss, fallen branches, and stones worn smooth by time.
+                  Suddenly, you find yourself surrounded by a <strong>bank of glowing silver fish</strong>, their sleek
+                  bodies moving in intricate patterns like ink across a page.</p>
+                <p>The fish dart around you, forming shapes and spirals that seem… purposeful. Not random. You reach out
+                  your hand, and the nearest fish splits from the group and swims a perfect circle around you.</p>
+                <p>Then the bank separates into <strong>three distinct schools</strong>, each forming a symbol in the
+                  water—one a swirling spiral, another a flickering star, the third a sharp arrow pointing downward.</p>
+                <p>The fish pulse with bioluminescent light, waiting, as if asking you to choose. Each group begins to
+                  slowly drift in a different direction—inviting you to follow.</p>
+                <div class="content-choice">
+                  <div class="choice" id="1" (click)="selectOption(1)">
+                    <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🐚 <strong>Follow the Spiral Fish</strong> – They swirl toward a hidden
+                      underwater garden. Choosing them will trigger a quiz about **aquatic plants and natural
+                      ecosystems**.</span>
+                  </div>
+                  <div class="choice" id="2" (click)="selectOption(2)">
+                    <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🌟 <strong>Follow the Star Fish</strong> – They flash and dart toward a
+                      rock formation etched with old markings. Choosing them will trigger a quiz about **mythical sea
+                      creatures and ancient underwater lore**.</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🪨 <strong>Follow the Arrow Fish</strong> – They cut swiftly toward the
+                      lake floor, guiding you to the cave’s entrance. Choosing them will trigger a quiz about
+                      **geography, underwater exploration, and deep-sea mysteries**.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,104 @@
+<ion-content [fullscreen]="true" class="center">
+  <div class="row wrapper">
+    <ion-grid>
+      <ion-row text-align="center">
+        <ion-col text-align="center">
+          <div style="display: flex; justify-content: center;">
+            <div class="dialogContents">
+              <div class="content-title">
+                <div class="back-button"></div>
+              </div>
+              <div class="content-image">
+                <img src="/assets/game/chapter1/village.jpeg">
+              </div>
+              <div class="content-content">
+                <h2 class="ion-text-center">~ 🍬 Story Scene: The Sugar That Whispers ~</h2>
+                <p>The crowd begins to thin as the sun leans westward, casting golden streaks between the market tents.
+                  Your satchel is full, your errands complete—fruit, vegetables, meat, and more than a fair share of
+                  unspoken truths.</p>
+                <p>But just as you turn to take the path home, a familiar scent catches your attention.
+                  <strong>Warm honey. Roasted nuts. Cinnamon. Caramel.</strong>
+                </p>
+                <p>Your feet stop before your thoughts do.</p>
+                <p>A small, curved cart stands alone under a patchwork parasol. Glass jars and polished tins line its
+                  surface, filled with sweets in every shape and color—<strong>candied petals, honey cubes, sugar-dusted
+                    plums, and twisted licorice like ribbons of night sky.</strong></p>
+                <p>Behind the stand, humming softly, is <strong>Gramma Thistle</strong>, a kind-eyed elder in robes the
+                  color of violet dusk. She’s lived in Lorynth longer than anyone can remember, though <strong>no one
+                    seems to recall how she came to be here.</strong></p>
+                <p><i>“Ah,” she says without looking up, “the heart seeks sugar when the soul is tired.”</i></p>
+                <p>She taps a wooden tray with her ladle. On it are three small confections, each nestled in a
+                  flower-shaped wrapper.</p>
+                <p><i>“ - Every sweet has a story,” she says, sliding the tray toward you. “And every story, a flavor of
+                    truth.”</i></p>
+                <p><i>“You may choose one, but only one. Sweets are stubborn things—they stick to what matters
+                    most.”</i></p>
+                <p>You eye the three treats laid before you. Each glows faintly, like it remembers something you do not.
+                </p>
+                <div class="content-choice">
+                  <div class="choice" id="1" (click)="selectOption(1)">
+                    <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🌸 Blushdrop Candy – soft pink with a floral shimmer — Evokes nostalgia
+                      and childhood memories</span>
+                  </div>
+                  <div class="choice" id="2" (click)="selectOption(2)">
+                    <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🌑 Nightfruit Chew – dark and star-speckled — Stirs dreams and myth,
+                      ancient tales whispered under stars</span>
+                  </div>
+                  <div class="choice" id="3" (click)="selectOption(3)">
+                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
+                    <span class="bullet-text">🌞 Crispfire Caramel – amber with tiny gold flecks — Sparks passion,
+                      warmth, tales of courage and legacy</span>
+                  </div>
+                </div>
+              </div>
+              <div class="content-button" (click)="goToNextStep()">
+                <button [class.blue]="true" type="button">
+                  <div class="button-text" style="font-size: 21px;">Next</div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="center" [edge]="true">
+    <ion-fab-button>
+      <ion-icon name="home" (click)="goHome()">ff</ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer style="background-color: white">
+  <ion-toolbar>
+    <ion-buttons slot="start" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="buttons-spacing">
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+      <ion-button>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <ion-icon class="bottom-menu" name="person-circle"></ion-icon>
+          <div>Profile</div>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

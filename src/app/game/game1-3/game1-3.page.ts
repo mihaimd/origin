@@ -18,6 +18,7 @@ export class Game13Page implements OnInit {
     public status1: boolean = false;
     public status2: boolean = false;
     public status3: boolean = false;
+    private nextStep: number = 1;
 
   constructor() { 
     addIcons({createOutline,home,personCircle});
@@ -54,4 +55,9 @@ export class Game13Page implements OnInit {
       this.status3 = true;
     }
   }
+
+    goToNextStep() {
+      console.log('next');
+      this.router.navigate([`game${this.nextStep}-4`]);
+    }
 }
