@@ -1,0 +1,11 @@
+span {
+    &.back-button {
+        display: inline-block;
+        top: 8px;
+        transition: top 0.5s, left 0.5s;
+    }
+}
+.bullet-text {
+    font-size: 1.15rem;
+    font-weight: 700;
+}

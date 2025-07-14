@@ -24,23 +24,24 @@
                 <div class="content-choice">
                   <div class="divider"></div>
                   <h5><strong>Choose your path:</strong></h5>
-                  <div class="choice" id="1" (click)="selectOption(1)">
+                  <div class="choice" id="1" (click)="selectOption(1)" #campains>
                     <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
-                    <span class="bullet-text">🏛️ Lost Civilizations & Forgotten Places</span>
+                    <span class="bullet-text">🏛️ Lost Civilizations</span>
+                    <span class="back-button span" #arrow></span>
                   </div>
-                  <div class="choice" id="2" (click)="selectOption(2)">
+                  <div class="choice" id="2" (click)="selectOption(2)" #campains>
                     <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
-                    <span class="bullet-text">📜 Ancient & Constructed Languages</span>
+                    <span class="bullet-text">📜 Ancient Languages</span>
                   </div>
-                  <div class="choice" id="3" (click)="selectOption(3)">
+                  <div class="choice" id="3" (click)="selectOption(3)" #campains>
                     <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
-                    <span class="bullet-text">📚 Knowledge Beyond Time</span>
+                    <span class="bullet-text">📚 Forgotten Knowledge</span>
                   </div>
                 </div>
               </div>
               <div class="content-button" (click)="goToNextStep()">
-                <button [class.blue]="true" type="button">
-                  <div class="button-text" style="font-size: 21px;">Next</div>
+                <button [class.blue]="true" type="button" [class.grey]="isDisabled" [disabled]="isDisabled">
+                  <div class="button-text" style="font-size: 21px;">{{buttonText}}</div>
                 </button>
               </div>
             </div>

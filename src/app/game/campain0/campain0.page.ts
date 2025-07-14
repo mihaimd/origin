@@ -1,8 +1,8 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, ViewChild, ElementRef, ViewChildren, QueryList, inject } from '@angular/core';
+import { CommonModule, Location } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { GlowDirective } from 'src/app/directives/glow.directive';
 import { DataService } from 'src/app/services/data.service';
 import { addIcons } from 'ionicons';
@@ -19,16 +19,23 @@ export class Campain0Page implements OnInit {
   bubbles = ['a', 'b', 'c'];
   dragOver = false;
   public questions: any[] = [];
+  private router = inject(Router);
+  private route = inject(ActivatedRoute);
+  private location = inject(Location);
+  private droppedOnTarget: number = 0;
+  @ViewChildren('draggable') draggable!: QueryList<ElementRef>;
+  @ViewChild('target') target!: ElementRef;
 
-  constructor(private dataService: DataService, private router: Router) { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.questions = this.dataService.getMessages('1-4');
-    console.log('q ->', this.questions);
+    this.route.params.subscribe(params => {
+      const chapterId = params['chapterId'];
+      const gameId = params['gameId'];
+      this.questions = this.dataService.getMessages(`${chapterId}-${gameId}`) || [];
+    });
+    console.log('onInit');
   }
-
-  @ViewChild('draggable') draggable!: ElementRef;
-  @ViewChild('target') target!: ElementRef;
 
   onDragMoved(event: CdkDragMove) {
     // This method is called when the draggable item is moved
@@ -36,7 +43,7 @@ export class Campain0Page implements OnInit {
     const isOverlap = this.checkOverlap(
       event.source.element.nativeElement, this.target.nativeElement
     );
-    console.log('top:', event.source.element.nativeElement.getBoundingClientRect().top, 'left:', event.source.element.nativeElement.getBoundingClientRect().left);
+    // console.log('top:', event.source.element.nativeElement.getBoundingClientRect().top, 'left:', event.source.element.nativeElement.getBoundingClientRect().left);
     isOverlap ? this.target.nativeElement.classList.add('shake') : this.target.nativeElement.classList.remove('shake');
   }
 
@@ -48,11 +55,15 @@ export class Campain0Page implements OnInit {
 
     if (isDroppedOnTarget) {
       console.log('Dropped on target!');
+      console.log('Draggable: ', this.draggable.length);
+      this.droppedOnTarget++;
       draggedEl.classList.add('dropped');
       targetEl.classList.remove('shake');
       const qId = draggedEl.getAttribute('id');
       if (qId) {
-        this.questionDetail(parseInt(qId, 10));
+        this.droppedOnTarget === this.draggable.length ?
+          this.questionDetail(parseInt(qId, 10), true) :
+          this.questionDetail(parseInt(qId, 10));
       }
 
       // You can trigger logic here: drop zone logic, emit event, etc.
@@ -73,8 +84,8 @@ export class Campain0Page implements OnInit {
     );
   }
 
-  questionDetail(id: number) {
+  questionDetail(id: number, last: boolean = false) {
     console.log('id ->', id);
-    this.router.navigate(['q-detail', '1-4', id]);
+    this.router.navigate(['q-detail', '1', '1', id, last]);
   }
 }
