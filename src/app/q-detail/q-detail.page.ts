@@ -31,6 +31,7 @@ export class QDetailPage implements OnInit {
   private location = inject(Location);
   public isCorrect: boolean = false;
   public isInCorrect: boolean = false;
+  private lastQuestion: boolean = false;
 
   constructor() {
     addIcons({ home, personCircle, personCircleOutline, cameraOutline, heart, logoIonic });
@@ -38,11 +39,12 @@ export class QDetailPage implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      const id = +params['id']; // Convert the id to a number
-      const qGroup = params['qGroup']; // Convert the qGroup to a number
-      console.log('Question ID:', id);
-      console.log('Question Group:', qGroup);
-      const result = this.dataService.getMessageById(qGroup, id) || of({});
+      const id = +params['questionId']; // Convert the id to a number
+      const gameId = params['gameId']; // Convert the qGroup to a number
+      const chapterId = params['chapterId'];
+      params['lastQuestion'] === 'false' ? this.lastQuestion = false : this.lastQuestion = true;
+      console.log('lastQuestion ->', this.lastQuestion);
+      const result = this.dataService.getMessageById(chapterId, gameId, id) || of({});
       if (result !== null) {
         this.answer$ = result;
       }
@@ -69,6 +71,11 @@ export class QDetailPage implements OnInit {
       clickedElement.classList.add('red');
       console.log('Incorrect answer');
     }
-    setTimeout(() => { this.location.back() }, 1300);
+
+    if(!this.lastQuestion) {
+      setTimeout(() => { this.location.back() }, 1300);
+    } else {
+      console.log('Naviagte to final screen');
+    }
   }
 }
