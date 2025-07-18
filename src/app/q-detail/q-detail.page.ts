@@ -42,9 +42,10 @@ export class QDetailPage implements OnInit {
       const id = +params['questionId']; // Convert the id to a number
       const gameId = params['gameId']; // Convert the qGroup to a number
       const chapterId = params['chapterId'];
+      const campaignId = params['campaignId'];
       params['lastQuestion'] === 'false' ? this.lastQuestion = false : this.lastQuestion = true;
       console.log('lastQuestion ->', this.lastQuestion);
-      const result = this.dataService.getMessageById(chapterId, gameId, id) || of({});
+      const result = this.dataService.getMessageById(chapterId, gameId, campaignId, id) || of({});
       if (result !== null) {
         this.answer$ = result;
       }

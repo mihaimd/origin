@@ -14,7 +14,7 @@ export const routes: Routes = [
     loadComponent: () => import('./how-to/how-to.page').then( m => m.HowToPage)
   },
   {
-    path: 'q-detail/:chapterId/:gameId/:questionId/:lastQuestion',
+    path: 'q-detail/:chapterId/:gameId/:campaignId/:questionId/:lastQuestion',
     loadComponent: () => import('./q-detail/q-detail.page').then( m => m.QDetailPage)
   },
   {
@@ -42,7 +42,7 @@ export const routes: Routes = [
     loadComponent: () => import('./game/game1-4/game1-4.page').then( m => m.Game14Page)
   },
   {
-    path: 'campain0/:chapterId/:gameId/:campainId',
+    path: 'campain0/:chapterId/:gameId/:campaignId',
     loadComponent: () => import('./game/campain0/campain0.page').then( m => m.Campain0Page)
   },
   {
