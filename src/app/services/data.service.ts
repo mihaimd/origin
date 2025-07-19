@@ -1076,7 +1076,1135 @@ export class DataService {
         format: 'text',
         pts: 20
       }
-    ]
+    ],
+    "game1-2-1": [
+      {
+        question: 'What emotion is most often associated with the color blue in Western cultures?',
+        answers: { options: [{ label: 'Joy', correct: false }, { label: 'Anger', correct: false }, { label: 'Sadness', correct: true }, { label: 'Curiosity', correct: false }] },
+        date: '2025-07-19',
+        id: 0,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which artist painted “The Scream,” expressing existential anxiety?',
+        answers: { options: [{ label: 'Pablo Picasso', correct: false }, { label: 'Edvard Munch', correct: true }, { label: 'Claude Monet', correct: false }, { label: 'Vincent van Gogh', correct: false }] },
+        date: '2025-07-19',
+        id: 1,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'In psychology, which term refers to the ability to understand and manage your own emotions?',
+        answers: { options: [{ label: 'Empathy', correct: false }, { label: 'Emotional intelligence', correct: true }, { label: 'Awareness', correct: false }, { label: 'Sympathy', correct: false }] },
+        date: '2025-07-19',
+        id: 2,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which composer is known for creating deeply emotional music while deaf?',
+        answers: { options: [{ label: 'Chopin', correct: false }, { label: 'Beethoven', correct: true }, { label: 'Mozart', correct: false }, { label: 'Bach', correct: false }] },
+        date: '2025-07-19',
+        id: 3,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which modern art movement focused heavily on emotion and abstract expression?',
+        answers: { options: [{ label: 'Cubism', correct: false }, { label: 'Realism ', correct: false }, { label: 'Surrealism', correct: false }, { label: 'Expressionism', correct: true }] },
+        date: '2025-07-19',
+        id: 4,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Crying in response to a powerful song is most closely tied to which psychological process?',
+        answers: { options: [{ label: 'Repression', correct: false }, { label: 'Numbness', correct: false }, { label: 'Catharsis', correct: true }, { label: 'Regression', correct: false }] },
+        date: '2025-07-19',
+        id: 5,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which literary genre is often used to explore identity and emotional growth?',
+        answers: { options: [{ label: 'Coming-of-age', correct: true }, { label: 'Horror', correct: false }, { label: 'Thriller', correct: false }, { label: 'Mystery', correct: false }] },
+        date: '2025-07-19',
+        id: 6,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which film genre is most associated with emotional transformation?',
+        answers: { options: [{ label: 'Sci-fi', correct: false }, { label: 'Action', correct: false }, { label: 'Western', correct: false }, { label: 'Drama', correct: true }] },
+        date: '2025-07-19',
+        id: 7,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'What is the Japanese term for appreciating the fleeting beauty of things?',
+        answers: { options: [{ label: 'Ikigai', correct: false }, { label: 'Mono no aware', correct: true }, { label: 'Wabi-sabi', correct: false }, { label: 'Zen', correct: false }] },
+        date: '2025-07-19',
+        id: 8,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which psychological theory emphasizes childhood in emotional development?',
+        answers: { options: [{ label: 'Freudian theory', correct: true }, { label: 'Behaviorism', correct: false }, { label: 'Humanism', correct: false }, { label: 'Existentialism', correct: false }] },
+        date: '2025-07-19',
+        id: 9,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'What is the primary goal of art therapy?',
+        answers: { options: [{ label: 'Teach painting', correct: false }, { label: 'Display artwork', correct: false }, { label: 'Heal emotional trauma', correct: true }, { label: 'Improve logic', correct: false }] },
+        date: '2025-07-19',
+        id: 10,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which emotion is considered “primary” in psychological models?',
+        answers: { options: [{ label: 'Embarrassment', correct: false }, { label: 'Fear', correct: true }, { label: 'Jealousy', correct: false }, { label: 'Guilt', correct: false }] },
+        date: '2025-07-19',
+        id: 11,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'The term “aesthetic experience” refers to:',
+        answers: { options: [{ label: 'A logic puzzle', correct: false }, { label: 'A sports moment', correct: false }, { label: 'Emotional response to beauty', correct: true }, { label: 'A religious ritual', correct: false }] },
+        date: '2025-07-19',
+        id: 12,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which famous quote describes the role of art in expressing pain?',
+        answers: { options: [{ label: '“Art is a lie that tells the truth.”', correct: false }, { label: '“Beauty is in the eye of the beholder.”', correct: false }, { label: '“Art is the wound turned into light.” ', correct: true }, { label: '“Art imitates life.”', correct: false }] },
+        date: '2025-07-19',
+        id: 13,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'What emotion is often associated with the violin?',
+        answers: { options: [{ label: 'Confidence', correct: false }, { label: 'Melancholy', correct: true }, { label: 'Surprise', correct: false }, { label: 'Rage', correct: false }] },
+        date: '2025-07-19',
+        id: 14,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which author wrote emotionally rich poetry in “Leaves of Grass”?',
+        answers: { options: [{ label: 'Walt Whitman', correct: true }, { label: 'Emily Dickinson', correct: false }, { label: 'Sylvia Plath', correct: false }, { label: 'Robert Frost', correct: false }] },
+        date: '2025-07-19',
+        id: 15,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which psychological disorder is linked to extreme emotional instability?',
+        answers: { options: [{ label: 'OCD', correct: false }, { label: 'Borderline Personality', correct: true }, { label: 'Autism', correct: false }, { label: 'Schizoid', correct: false }] },
+        date: '2025-07-19',
+        id: 16,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which medium is NOT commonly used in expressive therapy?',
+        answers: { options: [{ label: 'Geometry', correct: true }, { label: 'Dance', correct: false }, { label: 'Painting', correct: false }, { label: 'Music', correct: false }] },
+        date: '2025-07-19',
+        id: 17,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which painting technique emphasizes spontaneous brushstrokes and emotion?',
+        answers: { options: [{ label: 'Pointillism', correct: false }, { label: 'Renaissance layering', correct: false }, { label: 'Abstract expressionism', correct: true }, { label: 'Crosshatching', correct: false }] },
+        date: '2025-07-19',
+        id: 18,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which ancient Greek philosopher believed music could influence mood and morality?',
+        answers: { options: [{ label: 'Socrates', correct: false }, { label: 'Epicurus', correct: false }, { label: 'Plato', correct: true }, { label: 'Diogenes', correct: false }] },
+        date: '2025-07-19',
+        id: 19,
+        category: "Emotional Intelligence & Expression Through Art",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }
+    ],
+    "game1-2-2": [
+      {
+        question: 'Which city’s ruins were lost for centuries until uncovered in 1748?',
+        answers: { options: [{ label: 'Carthage', correct: false }, { label: 'Pompeii', correct: true }, { label: 'Troy', correct: false }, { label: 'Knossos', correct: false }] },
+        date: '2025-07-19',
+        id: 0,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which group is believed to have hidden the Ark of the Covenant?',
+        answers: { options: [{ label: 'Romans', correct: false }, { label: 'Israelites', correct: true }, { label: 'Egyptians', correct: false }, { label: 'Persians', correct: false }] },
+        date: '2025-07-19',
+        id: 1,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Who discovered the tomb of Tutankhamun?',
+        answers: { options: [{ label: 'Heinrich Schliemann', correct: false }, { label: 'Champollion', correct: false }, { label: 'Ramses', correct: false }, { label: 'Howard Carter', correct: true }] },
+        date: '2025-07-19',
+        id: 2,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which secretive group has been rumored to influence world events?',
+        answers: { options: [{ label: 'The Illuminati', correct: true }, { label: 'The Templars', correct: false }, { label: 'The Druids', correct: false }, { label: 'The Scribes', correct: false }] },
+        date: '2025-07-19',
+        id: 3,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which “hidden” empire ruled parts of Central Asia and used coded writing?',
+        answers: { options: [{ label: 'Phoenicians', correct: false }, { label: 'Celts ', correct: false }, { label: 'Khazars', correct: true }, { label: 'Huns', correct: false }] },
+        date: '2025-07-19',
+        id: 4,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which civilization built hidden cliff dwellings in the American Southwest?',
+        answers: { options: [{ label: 'Anasazi', correct: true }, { label: 'Apache', correct: false }, { label: 'Inuit', correct: false }, { label: 'Aztec', correct: false }] },
+        date: '2025-07-19',
+        id: 5,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which secret was vital to cracking WWII German codes?',
+        answers: { options: [{ label: 'The Enigma Machine', correct: true }, { label: 'Sputnik', correct: false }, { label: 'Manhattan Project', correct: false }, { label: 'Bletchley Scroll', correct: false }] },
+        date: '2025-07-19',
+        id: 6,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which island is home to the mysterious Moai statues?',
+        answers: { options: [{ label: 'Atlantis', correct: false }, { label: 'Easter Island', correct: true }, { label: 'Cyprus', correct: false }, { label: 'Santorini', correct: false }] },
+        date: '2025-07-19',
+        id: 7,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'What lost city is believed to lie beneath the sea, according to Plato?',
+        answers: { options: [{ label: 'Atlantis', correct: true }, { label: 'Babylon', correct: false }, { label: 'Petra', correct: false }, { label: 'Alexandria', correct: false }] },
+        date: '2025-07-19',
+        id: 8,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'What group used a fish symbol to communicate secretly?',
+        answers: { options: [{ label: 'Roman soldiers', correct: false }, { label: 'Druids', correct: false }, { label: 'Early Christians', correct: true }, { label: 'Spartans', correct: false }] },
+        date: '2025-07-19',
+        id: 9,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which Mesoamerican civilization is famous for its cryptic calendar system?',
+        answers: { options: [{ label: 'Olmec', correct: false }, { label: 'Maya', correct: true }, { label: 'Aztec', correct: false }, { label: 'Zapotec', correct: false }] },
+        date: '2025-07-19',
+        id: 10,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'The Knights Templar were believed to guard which secret?',
+        answers: { options: [{ label: 'A cursed sword', correct: false }, { label: 'Excalibur', correct: false }, { label: 'Book of Shadows', correct: false }, { label: 'Holy Grail', correct: true }] },
+        date: '2025-07-19',
+        id: 11,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which U.S. document is rumored to have a hidden map on the back?',
+        answers: { options: [{ label: 'Bill of Rights', correct: false }, { label: 'Constitution', correct: false }, { label: 'Declaration of Independence', correct: true }, { label: 'Emancipation Proclamation', correct: false }] },
+        date: '2025-07-19',
+        id: 12,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'The “Dead Sea Scrolls” were discovered in:',
+        answers: { options: [{ label: 'A pyramid', correct: false }, { label: 'A cave', correct: true }, { label: 'A temple', correct: false }, { label: 'A fortress', correct: false }] },
+        date: '2025-07-19',
+        id: 13,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which stone structure aligns perfectly with solstices?',
+        answers: { options: [{ label: 'Parthenon', correct: false }, { label: 'Stonehenge', correct: true }, { label: 'Acropolis', correct: false }, { label: 'Moai', correct: false }] },
+        date: '2025-07-19',
+        id: 14,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which “secret language” was used by day laborers during the Great Depression?',
+        answers: { options: [{ label: 'Morse Code', correct: false }, { label: 'Pig Latin', correct: false }, { label: 'Hobo Code', correct: true }, { label: 'Navajo Code', correct: false }] },
+        date: '2025-07-19',
+        id: 15,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'The ancient library in Alexandria was located in which country?',
+        answers: { options: [{ label: 'Greece', correct: false }, { label: 'Persia', correct: false }, { label: 'Egypt', correct: true }, { label: 'Italy', correct: false }] },
+        date: '2025-07-19',
+        id: 16,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'What is the term for secret writing systems?',
+        answers: { options: [{ label: 'Ciphers', correct: true }, { label: 'Crypts', correct: false }, { label: 'Stenography', correct: false }, { label: 'Manuscripts', correct: false }] },
+        date: '2025-07-19',
+        id: 17,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'Which ancient bronze artifact, discovered in Greece, is believed to be the world\'s first analog computer?',
+        answers: { options: [{ label: 'Delphi Compass', correct: false }, { label: 'Ptolemy Sphere', correct: false }, { label: 'Antikythera Mechanism', correct: true }, { label: 'Samos Chronometer', correct: false }] },
+        date: '2025-07-19',
+        id: 18,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }, {
+        question: 'What secret society was founded in 1717 and has long been the subject of conspiracy theories?',
+        answers: { options: [{ label: 'Freemasons ', correct: true }, { label: 'The Illuminated Ones', correct: false }, { label: 'Black Brotherhood', correct: false }, { label: 'Order of the Scroll', correct: false }] },
+        date: '2025-07-19',
+        id: 19,
+        category: "Secrets of History & Hidden Truths",
+        top: '10px',
+        left: '160px',
+        level: 0,
+        answtype: 'single',
+        format: 'text',
+        pts: 20
+      }
+    ],
+    "game1-2-3": [
+      {
+        "id": 1,
+        "question": "What creature's tears are said to heal wounds in mythology?",
+        "answers": {
+          "options": [
+            {
+              "label": "Griffin",
+              "correct": false
+            },
+            {
+              "label": "Phoenix",
+              "correct": true
+            },
+            {
+              "label": "Dragon",
+              "correct": false
+            },
+            {
+              "label": "Basilisk",
+              "correct": false
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "100px",
+        "left": "50px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 40
+      },
+      {
+        "id": 2,
+        "question": "What symbol is often used to represent eternity?",
+        "answers": {
+          "options": [
+            {
+              "label": "Triangle",
+              "correct": false
+            },
+            {
+              "label": "Star",
+              "correct": false
+            },
+            {
+              "label": "Ouroboros (snake eating its tail)",
+              "correct": true
+            },
+            {
+              "label": "Moon",
+              "correct": false
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "120px",
+        "left": "100px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 40
+      },
+      {
+        "id": 3,
+        "question": "In Norse mythology, what is the name of the tree that connects all worlds?",
+        "answers": {
+          "options": [
+            {
+              "label": "Mj\u00f6lnir",
+              "correct": false
+            },
+            {
+              "label": "Midgard",
+              "correct": false
+            },
+            {
+              "label": "Yggdrasil",
+              "correct": true
+            },
+            {
+              "label": "Fenrir",
+              "correct": false
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "140px",
+        "left": "150px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 40
+      },
+      {
+        "id": 4,
+        "question": "What Greek oracle was known for delivering prophecies at Delphi?",
+        "answers": {
+          "options": [
+            {
+              "label": "Athena",
+              "correct": false
+            },
+            {
+              "label": "Pythia",
+              "correct": true
+            },
+            {
+              "label": "Sybil of Cumae",
+              "correct": false
+            },
+            {
+              "label": "Cassandra",
+              "correct": false
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "160px",
+        "left": "200px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 30
+      },
+      {
+        "id": 5,
+        "question": "Which bird is often associated with omens and prophecy in various cultures?",
+        "answers": {
+          "options": [
+            {
+              "label": "Raven",
+              "correct": true
+            },
+            {
+              "label": "Sparrow",
+              "correct": false
+            },
+            {
+              "label": "Eagle",
+              "correct": false
+            },
+            {
+              "label": "Dove",
+              "correct": false
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "180px",
+        "left": "250px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 30
+      },
+      {
+        "id": 6,
+        "question": "What symbol represents rebirth in Egyptian mythology?",
+        "answers": {
+          "options": [
+            {
+              "label": "Scarab",
+              "correct": true
+            },
+            {
+              "label": "Jackal",
+              "correct": false
+            },
+            {
+              "label": "Pyramid",
+              "correct": false
+            },
+            {
+              "label": "Falcon",
+              "correct": false
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "200px",
+        "left": "300px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 30
+      },
+      {
+        "id": 7,
+        "question": "What is the meaning of the 'Eye of Horus' in Egyptian lore?",
+        "answers": {
+          "options": [
+            {
+              "label": "Destruction",
+              "correct": false
+            },
+            {
+              "label": "Protection and healing",
+              "correct": true
+            },
+            {
+              "label": "Power and conquest",
+              "correct": false
+            },
+            {
+              "label": "Luck and fortune",
+              "correct": false
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "220px",
+        "left": "350px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 20
+      },
+      {
+        "id": 8,
+        "question": "Which ancient civilization predicted the end of the world in 2012?",
+        "answers": {
+          "options": [
+            {
+              "label": "Aztecs",
+              "correct": false
+            },
+            {
+              "label": "Maya",
+              "correct": true
+            },
+            {
+              "label": "Inca",
+              "correct": false
+            },
+            {
+              "label": "Babylonians",
+              "correct": false
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "240px",
+        "left": "400px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 30
+      },
+      {
+        "id": 9,
+        "question": "What legendary sword was said to be pulled from a stone by King Arthur?",
+        "answers": {
+          "options": [
+            {
+              "label": "Durandal",
+              "correct": false
+            },
+            {
+              "label": "Masamune",
+              "correct": false
+            },
+            {
+              "label": "Hrunting",
+              "correct": false
+            },
+            {
+              "label": "Excalibur",
+              "correct": true
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "260px",
+        "left": "50px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 20
+      },
+      {
+        "id": 10,
+        "question": "Which creature is a symbol of transformation in many myths?",
+        "answers": {
+          "options": [
+            {
+              "label": "Lion",
+              "correct": false
+            },
+            {
+              "label": "Butterfly",
+              "correct": true
+            },
+            {
+              "label": "Bear",
+              "correct": false
+            },
+            {
+              "label": "Goat",
+              "correct": false
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "280px",
+        "left": "100px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 20
+      },
+      {
+        "id": 11,
+        "question": "Which mythological figure is associated with a labyrinth?",
+        "answers": {
+          "options": [
+            {
+              "label": "Medusa",
+              "correct": false
+            },
+            {
+              "label": "Minotaur",
+              "correct": true
+            },
+            {
+              "label": "Chimera",
+              "correct": false
+            },
+            {
+              "label": "Cyclops",
+              "correct": false
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "300px",
+        "left": "150px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 30
+      },
+      {
+        "id": 12,
+        "question": "What does the symbol of the snake represent in many cultures?",
+        "answers": {
+          "options": [
+            {
+              "label": "Duality or transformation",
+              "correct": true
+            },
+            {
+              "label": "Strength",
+              "correct": false
+            },
+            {
+              "label": "Loyalty",
+              "correct": false
+            },
+            {
+              "label": "Fertility only",
+              "correct": false
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "320px",
+        "left": "200px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 30
+      },
+      {
+        "id": 13,
+        "question": "In Greek myth, who was doomed to always tell the truth but never be believed?",
+        "answers": {
+          "options": [
+            {
+              "label": "Pandora",
+              "correct": false
+            },
+            {
+              "label": "Cassandra",
+              "correct": true
+            },
+            {
+              "label": "Hera",
+              "correct": false
+            },
+            {
+              "label": "Medea",
+              "correct": false
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "340px",
+        "left": "250px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 40
+      },
+      {
+        "id": 14,
+        "question": "Which plant is commonly associated with prophecy and visions?",
+        "answers": {
+          "options": [
+            {
+              "label": "Aloe",
+              "correct": false
+            },
+            {
+              "label": "Bay Laurel",
+              "correct": true
+            },
+            {
+              "label": "Thyme",
+              "correct": false
+            },
+            {
+              "label": "Lavender",
+              "correct": false
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "360px",
+        "left": "300px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 20
+      },
+      {
+        "id": 15,
+        "question": "The number three is often symbolic of what concept in myths?",
+        "answers": {
+          "options": [
+            {
+              "label": "Endings",
+              "correct": false
+            },
+            {
+              "label": "Balance and completeness",
+              "correct": true
+            },
+            {
+              "label": "War",
+              "correct": false
+            },
+            {
+              "label": "Youth",
+              "correct": false
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "380px",
+        "left": "350px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 30
+      },
+      {
+        "id": 16,
+        "question": "Who guards the gates of the underworld in Greek mythology?",
+        "answers": {
+          "options": [
+            {
+              "label": "Hades",
+              "correct": false
+            },
+            {
+              "label": "Cerberus",
+              "correct": true
+            },
+            {
+              "label": "Hermes",
+              "correct": false
+            },
+            {
+              "label": "Charon",
+              "correct": false
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "400px",
+        "left": "400px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 30
+      },
+      {
+        "id": 17,
+        "question": "In Celtic symbolism, what is the Triquetra often associated with?",
+        "answers": {
+          "options": [
+            {
+              "label": "Chaos",
+              "correct": false
+            },
+            {
+              "label": "Fire",
+              "correct": false
+            },
+            {
+              "label": "Life, death, and rebirth",
+              "correct": true
+            },
+            {
+              "label": "Darkness",
+              "correct": false
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "420px",
+        "left": "50px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 40
+      },
+      {
+        "id": 18,
+        "question": "What does a broken sword often symbolize in mythology?",
+        "answers": {
+          "options": [
+            {
+              "label": "Lost power or past betrayal",
+              "correct": true
+            },
+            {
+              "label": "Courage",
+              "correct": false
+            },
+            {
+              "label": "Victory",
+              "correct": false
+            },
+            {
+              "label": "Destiny fulfilled",
+              "correct": false
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "440px",
+        "left": "100px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 30
+      },
+      {
+        "id": 19,
+        "question": "Which of these is considered a prophetic tool?",
+        "answers": {
+          "options": [
+            {
+              "label": "Chalice",
+              "correct": false
+            },
+            {
+              "label": "Crystal ball",
+              "correct": true
+            },
+            {
+              "label": "Wand",
+              "correct": false
+            },
+            {
+              "label": "Harp",
+              "correct": false
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "460px",
+        "left": "150px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 20
+      },
+      {
+        "id": 20,
+        "question": "In prophecy legends, what usually follows the appearance of a comet?",
+        "answers": {
+          "options": [
+            {
+              "label": "Peace",
+              "correct": false
+            },
+            {
+              "label": "Great change or disaster",
+              "correct": true
+            },
+            {
+              "label": "Fertility",
+              "correct": false
+            },
+            {
+              "label": "War victory",
+              "correct": false
+            }
+          ]
+        },
+        "date": "2025-07-19",
+        "category": "Myth, Prophecy & Symbols",
+        "top": "480px",
+        "left": "200px",
+        "level": 0,
+        "answtype": "single",
+        "format": "text",
+        "pts": 30
+      }
+    ], 
   }
 
   constructor() { }

@@ -21,23 +21,24 @@
 
 <p>Your parents flinch—not from fear, but from pain. They’ve carried this burden for eighteen years.</p>
                 <div class="content-choice">
-                  <div class="choice" id="1" (click)="selectOption(1)">
+                  <div class="choice" id="1" (click)="selectOption(1)" #campains>
                     <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
-                    <span class="bullet-text">You put the pendant around your neck</span>
+                    <span class="bullet-text">Unlock the Storm Within</span>
+                    <span class="back-button span" #arrow></span>
                   </div>
-                  <div class="choice" id="2" (click)="selectOption(2)">
+                  <div class="choice" id="2" (click)="selectOption(2)" #campains>
                     <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
-                    <span class="bullet-text">You decide to see <strong>Eldrin</strong> the old wizzard which protects your village</span>
+                    <span class="bullet-text">Search the Hidden Drawer</span>
                   </div>
-                  <div class="choice" id="3" (click)="selectOption(3)">
+                  <div class="choice" id="3" (click)="selectOption(3)" #campains>
                     <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
-                    <span class="bullet-text">You go to the village center square to visit the "Wisdon Stone".</span>
+                    <span class="bullet-text">Stare into the Fireplace's Flames</span>
                   </div>
                 </div>
               </div>
               <div class="content-button" (click)="goToNextStep()">
-                <button [class.blue]="true" type="button">
-                  <div class="button-text" style="font-size: 21px;">Next</div>
+                <button [class.blue]="true" type="button" [class.grey]="isDisabled" [disabled]="isDisabled">
+                  <div class="button-text" style="font-size: 21px;">{{buttonText}}</div>
                 </button>
               </div>
             </div>
