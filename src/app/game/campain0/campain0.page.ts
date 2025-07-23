@@ -22,6 +22,8 @@ export class Campain0Page implements OnInit {
   private router = inject(Router);
   private route = inject(ActivatedRoute);
   private location = inject(Location);
+  private gameId: string = '1';
+  private campaignId: string = '0';
   private droppedOnTarget: number = 0;
   @ViewChildren('draggable') draggable!: QueryList<ElementRef>;
   @ViewChild('target') target!: ElementRef;
@@ -31,8 +33,9 @@ export class Campain0Page implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       const chapterId = params['chapterId'];
-      const gameId = params['gameId'];
-      this.questions = this.dataService.getMessages(`${chapterId}-${gameId}`) || [];
+      this.gameId = params['gameId'];
+      this.campaignId = params['campaignId'];
+      this.questions = this.dataService.getMessages(`${chapterId}-${this.gameId}-${this.campaignId}`) || [];
     });
     console.log('onInit');
   }
@@ -62,8 +65,8 @@ export class Campain0Page implements OnInit {
       const qId = draggedEl.getAttribute('id');
       if (qId) {
         this.droppedOnTarget === this.draggable.length ?
-          this.questionDetail(parseInt(qId, 10), true) :
-          this.questionDetail(parseInt(qId, 10));
+          this.questionDetail(parseInt(this.gameId, 10), parseInt(this.campaignId, 10), parseInt(qId, 10), true) :
+          this.questionDetail(parseInt(this.gameId, 10), parseInt(this.campaignId, 10), parseInt(qId, 10));
       }
 
       // You can trigger logic here: drop zone logic, emit event, etc.
@@ -84,8 +87,8 @@ export class Campain0Page implements OnInit {
     );
   }
 
-  questionDetail(id: number, last: boolean = false) {
+  questionDetail(gameId: number, campaignId: number, id: number, last: boolean = false) {
     console.log('id ->', id);
-    this.router.navigate(['q-detail', '1', '1', id, last]);
+    this.router.navigate(['q-detail', '1', gameId, campaignId, id, last]);
   }
 }

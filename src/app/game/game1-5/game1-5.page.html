@@ -22,20 +22,6 @@
                     in tongues unknown. A vision? A dream?</p>
                 <p>No</p>
                 <p>A memory</p>
-                <div class="content-choice">
-                  <div class="choice" id="1" (click)="selectOption(1)">
-                    <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
-                    <span class="bullet-text">📜 A city of lost scrolls and stone scholars</span>
-                  </div>
-                  <div class="choice" id="2" (click)="selectOption(2)">
-                    <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
-                    <span class="bullet-text"> 🐉 A burning battlefield echoing with ancient war cries</span>
-                  </div>
-                  <div class="choice" id="3" (click)="selectOption(3)">
-                    <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
-                    <span class="bullet-text"> 🌿 A grove older than the sun, guarded by whispering trees</span>
-                  </div>
-                </div>
               </div>
               <div class="content-button" (click)="goToNextStep()">
                 <button [class.blue]="true" type="button">
