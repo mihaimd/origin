@@ -21,23 +21,23 @@
 
 <p>Your parents flinch—not from fear, but from pain. They’ve carried this burden for eighteen years.</p>
                 <div class="content-choice">
-                  <div class="choice" id="1" (click)="selectOption(1)" #campains>
+                  <div class="choice" id="1" [class.completed]="localStorageGame[0]?.['completed'].includes(1)" (click)="selectOption(1)" #campains>
                     <span class="bullet" [ngClass]="status1 ? 'selected' : ''"></span>
                     <span class="bullet-text">Unlock the Storm Within</span>
-                    <span class="back-button span" #arrow></span>
+                    <span class="back-button span" [class.none]="isGameCompleted" #arrow></span>
                   </div>
-                  <div class="choice" id="2" (click)="selectOption(2)" #campains>
+                  <div class="choice" [class.completed]="localStorageGame[0]?.['completed'].includes(2)" id="2" (click)="selectOption(2)" #campains>
                     <span class="bullet" [ngClass]="status2 ? 'selected' : ''"></span>
                     <span class="bullet-text">Search the Hidden Drawer</span>
                   </div>
-                  <div class="choice" id="3" (click)="selectOption(3)" #campains>
+                  <div class="choice" [class.completed]="localStorageGame[0]?.['completed'].includes(3)" id="3" (click)="selectOption(3)" #campains>
                     <span class="bullet" [ngClass]="status3 ? 'selected' : ''"></span>
-                    <span class="bullet-text">Stare into the Fireplace's Flames</span>
+                    <span class="bullet-text">Stare into the Flames</span>
                   </div>
                 </div>
               </div>
               <div class="content-button" (click)="goToNextStep()">
-                <button [class.blue]="true" type="button" [class.grey]="isDisabled" [disabled]="isDisabled">
+                <button [class.blue]="true" type="button" [class.gold]="isGameCompleted" [class.grey]="isDisabled" [disabled]="isDisabled">
                   <div class="button-text" style="font-size: 21px;">{{buttonText}}</div>
                 </button>
               </div>

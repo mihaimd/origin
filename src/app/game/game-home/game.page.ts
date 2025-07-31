@@ -60,7 +60,7 @@ export class GamePage implements OnInit {
   goToNextStep() {
     console.log('next');
     // this.router.navigate([`game${this.nextStep}-2`]);
-    this.router.navigate([`game0`]);
+    this.router.navigate([`game0`, 0]);
   }
 
 }

@@ -4,6 +4,9 @@ span {
         top: 8px;
         transition: top 0.5s, left 0.5s;
     }
+    &.none {
+        display: none;
+    }
 }
 .bullet-text {
     font-size: 1.15rem;

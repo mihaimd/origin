@@ -27,7 +27,8 @@ export class QuestionRiverPage implements OnInit {
   }
 
   ngOnInit() {
-    this.getQuestions()
+    console.log('QuestionRiverPage initialized');
+    this.getQuestions();
   }
 
   refresh(ev: any) {
@@ -37,6 +38,7 @@ export class QuestionRiverPage implements OnInit {
   }
 
   getQuestions(): Message[] {
+    console.log(this.data.getMessages());
     return this.data.getMessages();
   }
 

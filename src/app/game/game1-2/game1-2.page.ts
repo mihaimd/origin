@@ -24,6 +24,9 @@ export class GamePage12 implements OnInit {
   public selectedOption: number = 1;
   public completed: boolean = false;
   public buttonText: string = 'Play';
+  private completedCampaingts: any;
+  public localStorageGame: any;
+  public isGameCompleted: boolean = false;
   @ViewChild('arrow', { static: false }) arrow!: ElementRef<HTMLElement>;
   @ViewChildren('campains') campains!: QueryList<ElementRef>;
 
@@ -32,6 +35,23 @@ export class GamePage12 implements OnInit {
   }
 
   ngOnInit() {
+    const finnishedCampains = localStorage.getItem('campaigns');
+    if (finnishedCampains) {
+      this.completedCampaingts = JSON.parse(finnishedCampains);
+      if (this.completedCampaingts.length > 0) {
+        this.localStorageGame = this.completedCampaingts.filter((campaign: any) => {
+          return parseInt(campaign.id, 10) === 2;
+        });
+      }
+      if (this.localStorageGame.length > 0) {
+        this.isGameCompleted = this.localStorageGame[0]['completed'].length === 3;
+      }
+
+      if (this.isGameCompleted) {
+        this.buttonText = 'Next';
+        this.isDisabled = false;
+      }
+    }
   }
 
   goHome(): void {
@@ -43,36 +63,42 @@ export class GamePage12 implements OnInit {
   }
 
   selectOption(id: number) {
-    if (id === 1) {
+    if (id === 1 && !this.localStorageGame[0]?.['completed'].includes(1)) {
       this.arrow.nativeElement.style.top = 7 + 'px';
-      this.arrow.nativeElement.style.left = 30 + 'px';
+      this.arrow.nativeElement.style.left = 50 + 'px';
     }
-    if (id === 2) {
+    if (id === 2 && !this.localStorageGame[0]?.['completed'].includes(2)) {
       this.arrow.nativeElement.style.top = 40 + 'px';
-      this.arrow.nativeElement.style.left = 30 + 'px';
-    }
-
-    if (id === 3) {
-      this.arrow.nativeElement.style.top = 73 + 'px';
       this.arrow.nativeElement.style.left = 50 + 'px';
     }
 
-    this.nextStep = id;
-    this.isDisabled = false;
+    if (id === 3 && !this.localStorageGame[0]?.['completed'].includes(3)) {
+      this.arrow.nativeElement.style.top = 73 + 'px';
+      this.arrow.nativeElement.style.left = 50 + 'px';
+    }
+    if (this.localStorageGame.length > 0 && !this.localStorageGame[0]?.['completed'].includes(id)) {
+      this.nextStep = id;
+      this.isDisabled = false;
+      console.log('next1', this.nextStep);
+    } else {
+      this.nextStep = id;
+      this.isDisabled = false;
+      console.log('next2', this.nextStep);
+    }
 
-    if (id === 1) {
+    if (id === 1 && !this.localStorageGame[0]?.['completed'].includes(1)) {
       this.status1 = true;
       this.status2 = false;
       this.status3 = false;
     }
 
-    if (id === 2) {
+    if (id === 2 && !this.localStorageGame[0]?.['completed'].includes(2)) {
       this.status1 = false;
       this.status2 = true;
       this.status3 = false;
     }
 
-    if (id === 3) {
+    if (id === 3 && !this.localStorageGame[0]?.['completed'].includes(3)) {
       this.status1 = false;
       this.status2 = false;
       this.status3 = true;
@@ -81,12 +107,10 @@ export class GamePage12 implements OnInit {
 
   goToNextStep() {
     console.log('next');
-    if (this.completed) {
-      this.router.navigate([`game${this.nextStep}-2`]);
-      this.buttonText = 'Next';
+    if (this.localStorageGame[0]?.['completed'].length === 3) {
+      this.router.navigate([`game1-3`, 0]);
     } else {
-      this.buttonText = 'Play';
-      this.router.navigate([`campain0`, '1', '2', `${this.nextStep}`]);
+      this.router.navigate([`campain0`, '1', '2', `${this.nextStep}`, 'false']);
     }
   }
 

@@ -27,14 +27,15 @@
 }
 
 .pendant-wrapper {
-    height: 200px;
+    // height: 200px;
     // position: relative;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     // margin: 0 auto;
     // flex-shrink: 0;
-    margin: 100px;
+    // margin: 92px;
 }
 
 .pendant {
@@ -47,10 +48,9 @@
     background-size: cover;
     background-position: center;
     transition: box-shadow 0.3s ease;
-    // position: absolute;
-    // top: 0;
-    // left: 50%;
-    // transform: translateX(-50%);
+    position: absolute;
+    top: 48%;
+
     pointer-events: auto;
 }
 
@@ -78,6 +78,7 @@
     50% {
         transform: translate(-1px, 2px) rotate(-1deg);
     }
+
     60% {
         transform: translate(-3px, 1px) rotate(0deg);
     }
@@ -114,4 +115,172 @@
     height: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
+}
+
+.progress-container {
+    position: absolute;
+    top: 48%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    opacity: 0.8;
+    overflow: hidden;
+    transform: rotate(180deg);
+}
+
+.progress {
+    width: 100%;
+    height: 0%;
+    width: 150px;
+    max-height: 150px;
+    /* Start empty */
+    transition: height 5s ease;
+    z-index: 1;
+    background: greenyellow;
+}
+
+.vine {
+    width: 100%;
+    max-width: 300px;
+    height: 455px;
+    background-image: url('/assets/img/vine.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 25%;
+}
+
+.star {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    background-image: url('/assets/img/star.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 8px;
+    left: 6px;
+}
+
+.star__1 {
+    top: 8px;
+    left: 6px;
+    animation: bounce 1s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.star__2 {
+    top: 8px;
+    left: 196px;
+    animation: bounce 1s ease-out;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.star__3 {
+    top: -25px;
+    left: 35%;
+    animation: bounce 1s ease-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bounce {
+    0% {
+        opacity: 1;
+        width: 0;
+        height: 0;
+    }
+
+    10% {
+        opacity: 1;
+        width: 10px;
+        height: 10px;
+    }
+
+    20% {
+        opacity: 1;
+        width: 20px;
+        height: 20px;
+    }
+
+    30% {
+        opacity: 1;
+        width: 30px;
+        height: 30px;
+    }
+
+    40% {
+        opacity: 1;
+        width: 40px;
+        height: 40px;
+    }
+
+    50% {
+        opacity: 1;
+        width: 50px;
+        height: 50px;
+    }
+
+    60% {
+        opacity: 1;
+        width: 60px;
+        height: 60px;
+    }
+
+    70% {
+        width: 70px;
+        height: 70px;
+    }
+
+    80% {
+        opacity: 1;
+        width: 100px;
+        height: 100px;
+    }
+
+    90% {
+        opacity: 1;
+        width: 90px;
+        height: 90px;
+    }
+
+    95% {
+        opacity: 1;
+        width: 100px;
+        height: 100px;
+    }
+
+    98% {
+        opacity: 1;
+        width: 90px;
+        height: 90px;
+    }
+
+    100% {
+        opacity: 1;
+        width: 100px;
+        height: 100px;
+    }
+
+}
+
+.campaign-btn {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    width: 300px;
+    transform: translateX(-50%);
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 21px;
+    pointer-events: auto;
+    &.hidden {
+        display: none;
+    }
 }

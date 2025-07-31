@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, ViewChildren, QueryList, inject } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ViewChildren, QueryList, inject, AfterViewInit } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
@@ -15,7 +15,7 @@ import { DragDropModule, CdkDragMove, CdkDragEnd } from '@angular/cdk/drag-drop'
   standalone: true,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, DragDropModule, GlowDirective]
 })
-export class Campain0Page implements OnInit {
+export class Campain0Page implements OnInit, AfterViewInit {
   bubbles = ['a', 'b', 'c'];
   dragOver = false;
   public questions: any[] = [];
@@ -25,8 +25,14 @@ export class Campain0Page implements OnInit {
   private gameId: string = '1';
   private campaignId: string = '0';
   private droppedOnTarget: number = 0;
+  public starScreen: boolean = false;
   @ViewChildren('draggable') draggable!: QueryList<ElementRef>;
   @ViewChild('target') target!: ElementRef;
+  @ViewChild('progress') progress!: ElementRef;
+  @ViewChild('stars') stars!: ElementRef;
+  @ViewChild('star1') star1!: ElementRef;
+  @ViewChild('star2') star2!: ElementRef;
+  @ViewChild('star3') star3!: ElementRef;
 
   constructor(private dataService: DataService) { }
 
@@ -35,6 +41,8 @@ export class Campain0Page implements OnInit {
       const chapterId = params['chapterId'];
       this.gameId = params['gameId'];
       this.campaignId = params['campaignId'];
+      this.starScreen = params['starScreen'] === 'true';
+      console.log('Star screen:', this.starScreen);
       this.questions = this.dataService.getMessages(`${chapterId}-${this.gameId}-${this.campaignId}`) || [];
     });
     console.log('onInit');
@@ -90,5 +98,58 @@ export class Campain0Page implements OnInit {
   questionDetail(gameId: number, campaignId: number, id: number, last: boolean = false) {
     console.log('id ->', id);
     this.router.navigate(['q-detail', '1', gameId, campaignId, id, last]);
+  }
+
+  triggerProgress() {
+    this.progress.nativeElement.style.height = '30%';
+    this.stars.nativeElement.style.visibility = 'visible';
+  }
+
+  ngAfterViewInit(): void {
+    console.log('AfterViewInit');
+    if (this.route.snapshot.params['starScreen'] === 'true') {
+      const getStorage = localStorage.getItem('campaigns');
+      if (getStorage) {
+        let games = JSON.parse(getStorage);
+        const game = games.filter((c: any) => c.id === this.gameId);
+        if (game[0]) {
+          console.log('Game found ->', game);
+          // game[0].completed.push(parseInt(this.campaignId, 10));
+          // games = [...games, game[0]];
+          games.forEach((g: any)=>{
+            if(g.id === game[0].id){
+              g.completed.push(parseInt(this.campaignId,10))
+            }
+          })
+        } else {
+          games.push({
+            id: this.gameId,
+            completed: [parseInt(this.campaignId, 10)]
+          })
+        }
+
+        localStorage.setItem('campaigns', JSON.stringify(games));
+      } else {
+        localStorage.setItem('campaigns', JSON.stringify([{ id: this.gameId, completed: [parseInt(this.campaignId, 10)] }]));
+      }
+      // const localStorageData = JSON.stringify([{ id: this.gameId, completed: [1] }]);
+      // localStorage.setItem('campaigns', localStorageData);
+      setTimeout(() => {
+        this.star1.nativeElement.classList.add('star__1');
+        this.star2.nativeElement.classList.add('star__2');
+        this.star3.nativeElement.classList.add('star__3');
+      }, 3000);
+      this.draggable.forEach((el: ElementRef) => {
+        el.nativeElement.style.display = 'none';
+      })
+    }
+  }
+
+  backToStory() {
+    if (this.gameId === '1') {
+      this.router.navigate([`game0`, this.campaignId]);
+    } else {
+      this.router.navigate([`game1-${this.gameId}`, this.campaignId]);
+    }
   }
 }
